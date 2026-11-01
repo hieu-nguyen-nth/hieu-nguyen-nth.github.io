@@ -1,0 +1,146 @@
+{
+  "cake-ai": {
+    "framing": "Use AI for interpretation; keep financial authorization explicit.",
+    "context": "A large part of everyday commerce happens in conversations. Customers receive an account number, amount, or payment description in a message or image, then have to re-enter it in a banking app. The opportunity was to remove that repeated work without turning a language model into the authority to move money.",
+    "choice": "I separated the experience into understanding the input, preparing a structured transaction, and customer review. The model handled unstructured payment information; banking services and the customer retained their roles in validation and authorization. Voice banking stayed on a separate research and prototype track.",
+    "delivery": "Alongside the customer experience, I created AI-assisted PM workflows for prototypes, PRDs, and engineering tickets. The PM supplied the problem, scope, and product context, while the tools accelerated preparation. More than ten PMs were trained in the approach.",
+    "lesson": "AI capability becomes useful when its role in the customer journey is precise. Interpretation, validation, and authorization need different owners.",
+    "flow": [
+      "Message or image",
+      "AI extracts payment details",
+      "Structured transfer draft",
+      "Customer reviews & authorizes"
+    ]
+  },
+  "cake-risk": {
+    "framing": "Make policy change a product capability that Risk can operate.",
+    "context": "Risk controls were spread across product teams. Changing a policy meant coordinating engineering work and release schedules, even when the team needed to respond quickly to a new fraud pattern. Risk Operations was the internal customer whose workflow needed redesign.",
+    "choice": "I reframed the problem around a configurable control plane: common data models and rule workflows that Risk could operate across products. The initial scope prioritized rule and policy management; broader investigation tooling could follow.",
+    "delivery": "I reviewed the existing engines, interviewed Risk, prototyped the admin experience, and aligned backend, mobile, web, card, and operations teams. The work connected the policy model to the way teams would actually configure and deploy a control.",
+    "lesson": "An internal platform changes operating leverage when it gives the right team a usable capability, with clear ownership across the system.",
+    "flow": [
+      "Risk policy",
+      "Configurable rules",
+      "Shared decision engine",
+      "Controls across products"
+    ]
+  },
+  "fundiin-qr": {
+    "framing": "Validate a new borrowing behavior before rebuilding for scale.",
+    "context": "Fundiin’s merchant-based installment product limited where customers could use credit. QR payments were already familiar to customers and offered a route into more everyday payment situations. The question was whether credit could fit that existing behavior.",
+    "choice": "I chose an MVP that reused the existing lending system. It accepted constraints in flexibility to test customer demand before committing to a larger overhaul. Discovery combined payment behavior, market and competitor research, and customer research, while eligibility and risk remained part of the launch design.",
+    "delivery": "I owned the business case, vision, roadmap, and cross-functional delivery. I also coached junior product colleagues through research, product artifacts, and developer coordination while staying accountable for executive and risk decisions. The experience centered on scanning, understanding the eligible offer and terms, and confirming payment.",
+    "lesson": "A 0-to-1 launch should test the behavior that matters. Early adoption can then justify investment in the platform needed to support it.",
+    "flow": [
+      "Familiar QR payment",
+      "Eligible credit offer",
+      "Clear terms & confirmation",
+      "Usage informs the next investment"
+    ]
+  },
+  "fundiin-lenders": {
+    "framing": "Build the lending infrastructure for a growing network of financial partners.",
+    "context": "Growth depended on access to lending capital. Limited funding and partner concentration meant that stronger customer demand alone could not expand the business. Each new institution also brought different product models, fund flows, APIs, and accounting needs.",
+    "choice": "I designed lender integration as a scalable platform capability. A common internal loan model and institution-specific adapters separated shared product behavior from partner differences. We launched with one lender while establishing the architecture for additional institutions.",
+    "delivery": "I led the business case, product design, partner integrations, and launch across product, engineering, finance, legal, risk, and leadership. Fund-flow and reconciliation work made the model operable. When engineering attrition threatened critical knowledge, I escalated a continuity plan so the team could finish delivery and transfer context.",
+    "lesson": "A scalable platform expands the business’s options: more capital partners, less dependence on one institution, and a common foundation for new lending products.",
+    "flow": [
+      "Common customer & loan model",
+      "Lender matching & orchestration",
+      "Institution-specific adapters",
+      "5+ connected lenders"
+    ],
+    "current_context": "The original launch outcome covered three financial institutions. Hieu’s subsequent update states that the platform now connects 5+ lenders; it does not establish a new funding-capacity figure or attribute every later integration to the original launch."
+  },
+  "fundiin-core": {
+    "framing": "Own what differentiates the business; integrate what does not.",
+    "context": "Separate app, web, and partner flows duplicated product rules and fragmented data. The inherited core had been built around a different lending behavior and was becoming a constraint on repeated borrowing, new channels, and new products.",
+    "choice": "I led a hybrid build-versus-buy approach. We built the differentiating lending logic and common product state, integrated standardized identity and payment services, and kept them behind normalized interfaces. We migrated in phases so the business could continue operating.",
+    "delivery": "The program spanned a 25-person cross-functional team. I clarified product models and boundaries with new engineering leadership, gave product colleagues ownership of component workstreams, and aligned Operations, Finance, and Accounting on migration and readiness. The target was reusable capabilities that more than one channel or product could use.",
+    "lesson": "A platform redesign is also an operating-model change. Architecture, ownership, migration, and reconciliation have to work together.",
+    "flow": [
+      "Shared product & loan model",
+      "Reusable lending services",
+      "Vendor gateways",
+      "Phased channel migration"
+    ]
+  },
+  "zalo-remittance": {
+    "framing": "Build the domestic capability while partnering for international reach.",
+    "context": "ZaloPay had domestic wallet infrastructure but no international remittance product. Launching required more than an incoming transfer: partner onboarding, bank settlement, recipient payout, compliance, reconciliation, and support had to behave as one service.",
+    "choice": "We chose a partnership-led model for overseas origination and corridor reach, while building or extending the domestic wallet, bank connectivity, and operating capabilities. I helped connect the customer journey to the fund-flow and responsibility model.",
+    "delivery": "I led a 20-person cross-functional group and stepped into a program-coordination gap: one integrated plan, clear dependencies, resource needs, and senior sponsorship. Product, engineering, compliance, operations, and business teams needed shared decisions as well as a shared launch date.",
+    "lesson": "Cross-company product delivery depends on making ownership and failure handling clear, especially when no single team controls the full journey.",
+    "flow": [
+      "Overseas originating partner",
+      "Bank & compliance coordination",
+      "Domestic wallet capabilities",
+      "Recipient payout & reconciliation"
+    ]
+  },
+  "zalo-apis": {
+    "framing": "Use enterprise launches to create repeatable product capabilities.",
+    "context": "Enterprise partners needed different payment behaviors: collecting money, paying it out, or reserving funds before final settlement. Treating every request as another one-off integration would limit reuse and multiply operating complexity.",
+    "choice": "I separated these use cases into appropriate product flows and API capabilities. Partner prioritization considered reach and economics alongside whether the requested work would create a reusable capability for future integrations.",
+    "delivery": "I led B2B product and API integrations across partners including Google, ByteDance, Grab, and Lazada. Delivery involved translating the partner’s business model into contracts, integration sequences, operational requirements, and a coordinated go-live plan.",
+    "lesson": "An API product includes the partner’s path to successful use: clear flows, documentation, testing, operational contacts, and launch readiness—not just an endpoint.",
+    "flow": [
+      "Enterprise business model",
+      "Payment capability & API contract",
+      "Partner integration & certification",
+      "Launch & operating feedback"
+    ]
+  },
+  "cake-investment": {
+    "framing": "Turn a product gap into a new investment proposition and revenue line.",
+    "context": "Cake’s existing investment proposition was narrow, and a fund partnership was expected to end. Demand for stock investing and other assets created an opportunity, but adding isolated partner products would leave customers with fragmented accounts and portfolio views. The commercial question was how investment could become a stronger reason to keep financial activity inside Cake.",
+    "choice": "I assessed market trends, competing offers, and behavior from the previous product, then proposed a centralized customer experience backed by specialist partners. Stock trading came first. The initial scope focused on account opening, funding, trading, market information, and watchlists; broader portfolio features and other asset classes were phased later.",
+    "delivery": "I led the roadmap and partner integration across product, engineering, design, commercial, legal, compliance, security, finance, and operations. With much of the securities backend owned by a partner, we had to map identity, account creation, orders, callbacks, reconciliation, and responsibility across organizations. I translated that work into customer flows, wireframes, milestones, and launch priorities.",
+    "lesson": "New-venture product leadership connects market selection, the commercial model, customer experience, and partner architecture. Sequencing a focused first launch makes a broader platform strategy achievable.",
+    "flow": [
+      "Market & customer opportunity",
+      "Stock-trading MVP",
+      "Regulated partner integration",
+      "Launch, revenue & phased expansion"
+    ]
+  },
+  "cake-travel": {
+    "framing": "Own the customer journey and distribution model, with specialist suppliers behind it.",
+    "context": "Cake already offered travel through partner SDKs, but each provider brought its own interface and release dependencies. Cake had limited control over the catalog, add-ons, or customer journey. A banking-app-only feature also limited the opportunity to distribute the same service through other channels.",
+    "choice": "I reframed the work as a travel-commerce platform Cake could operate and distribute. We would own discovery, booking, payment, and the customer-facing journey, while integrating specialist suppliers through backend adapters. An embeddable mini-app separated routine travel releases from the main native banking app.",
+    "delivery": "I combined market opportunity, current performance, customer needs, and partner operating issues into the product and business case. I led partner solution design, architecture, wireframes, requirements, release milestones, and launch readiness. Flights were the initial MVP, with other services and post-booking capabilities sequenced as later scope.",
+    "lesson": "The product decision changed both delivery and economics: independent releases, a consistent customer journey, and a distribution capability that could extend beyond one host app.",
+    "flow": [
+      "Supplier inventory & adapters",
+      "Shared booking & payment model",
+      "Embeddable mini-app",
+      "Cake and partner distribution"
+    ]
+  },
+  "fundiin-ml-risk": {
+    "framing": "Make ML useful inside a risk decision system, with the right evaluation and human boundaries.",
+    "context": "Fundiin’s rule-based screening was becoming harder to maintain, and Risk Operations still carried a substantial manual-review workload. The opportunity was to use combinations of transaction, merchant, device, behavioral, and customer signals more effectively. Overall accuracy would not be a sufficient launch criterion: rare fraud creates class imbalance, and false positives can reject good customers while missed fraud creates real losses.",
+    "choice": "I brought Risk, Data Science, and Engineering together around the operating outcome and the economics of errors. We defined the model’s role, policy constraints, thresholds, and manual-review bands. With limited data-science capacity, we selected AutoML for the initial production iteration so the team could learn from the decision workflow without first building a custom training stack. The tradeoff was less transparency and control, making validation and oversight especially important.",
+    "delivery": "I helped define the meaning and decision-time availability of business features; Data Science owned feature engineering and model training. I also challenged potential leakage from information that would not have been available when the original lending decision was made. We ran the model beside the existing process in shadow mode for roughly two to three months, inspected disagreements, and refined parameters before a staged rollout. Risk retained judgment on uncertain cases, while screening reduced the population requiring manual effort.",
+    "lesson": "The product is the complete decision system: model, policy rules, thresholds, exceptions, monitoring, and human accountability. My role was to connect those parts to a business outcome, not just introduce an algorithm.",
+    "flow": [
+      "Define risk goals & error costs",
+      "Evaluate in shadow mode",
+      "Set thresholds & human review",
+      "Stage deployment & monitor outcomes"
+    ]
+  },
+  "zalo-payment-conversion": {
+    "framing": "Use customer research to challenge the funnel hypothesis, then experiment on the right problem.",
+    "context": "The payment journey lost users between intent and completion. Looking only at aggregate conversion hid different causes: incomplete instrumentation, errors in partner-specific flows, and genuine customer confusion. A drop on a chart told us where to investigate, but did not explain what needed to change.",
+    "choice": "I started with SQL and Python to repair missing events and segment the funnel by partner, interaction step, device, and failure behavior. I paired that analysis with more than 20 customer interviews and usability testing. One important finding overturned our initial belief that layout was causing a drop: customer conversations and segmented behavior pointed to intermittent technical failures later in the journey on a wider range of devices. Reliability became the priority before another screen redesign.",
+    "delivery": "After diagnosing the blockers, I led 10 A/B-tested experiments across content clarity, information hierarchy, call-to-action placement, button treatment, and flow simplification. The work connected customer explanations and observed behavior to a measured funnel segment, rather than treating every drop-off as a design problem. Interview outreach respected consent, with usability testing used where direct contact was unavailable.",
+    "lesson": "Research creates value when it changes the decision. Combining quantitative and qualitative evidence helped us separate missing measurement, technical failure, and customer choice—and stop optimizing the wrong explanation.",
+    "flow": [
+      "Instrument & segment the funnel",
+      "Interview & observe customers",
+      "Test the cause, including reliability",
+      "Experiment & measure conversion"
+    ]
+  }
+}

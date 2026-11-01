@@ -1,0 +1,290 @@
+{
+  "afield": {
+    "lede": "A research companion built around a personal problem: too many places to keep up, and a 45-minute trip across the Bay that could become time to learn.",
+    "problem": "My reading was scattered across newsletters, email, blogs, and news sites. Saving more links did not make it easier to connect the ideas or keep up with a topic. A roughly 45-minute trip across the Bay created another opportunity: I could listen when reading a screen was impractical. I wanted the experience to fit my interests and available time, rather than another feed to scroll.",
+    "approach": "I designed two connected journeys. Explore answers a specific question; Stay Updated follows a topic over time. AI suggests subtopics and recurring learning sources, while the reader chooses what to follow. The reader can set depth, source coverage, reusable briefing blocks, and a reading or listening budget. The output is a saved, cited text brief with audio available on demand. The current source layer reads public pages and feeds.",
+    "flow_title": "From a learning goal to a brief you can read or hear",
+    "flow_note": "Human choices set the scope. Models interpret and compose. Application rules control retrieval, publication, jobs, and media checks.",
+    "steps": [
+      [
+        [
+          "human"
+        ],
+        "Set the goal",
+        "Choose a question or recurring topic, context, depth, and a reading or listening budget.",
+        "Reader"
+      ],
+      [
+        [
+          "ai",
+          "human"
+        ],
+        "Shape the topic",
+        "Review AI-suggested subtopics and learning sources; select the ones worth following.",
+        "Gemini · reader approval"
+      ],
+      [
+        [
+          "code",
+          "tools"
+        ],
+        "Collect evidence",
+        "Fetch selected pages, feeds, or bounded links; use search when the coverage mode calls for it.",
+        "Worker · Tavily · retrieval rules"
+      ],
+      [
+        [
+          "ai",
+          "code"
+        ],
+        "Compose & check",
+        "Generate a source-grounded brief; validate citation references and structured output before publishing.",
+        "Gemini · application validation"
+      ],
+      [
+        [
+          "code"
+        ],
+        "Save & revisit",
+        "Store the brief and its original inputs. Recurring schedules create new runs; saved text stays stable.",
+        "Supabase · durable job state"
+      ],
+      [
+        [
+          "human",
+          "ai",
+          "code"
+        ],
+        "Listen on demand",
+        "Request narration of the saved text. Generate speech and check the resulting transcript and duration.",
+        "Gemini speech · FFmpeg / FFprobe"
+      ]
+    ],
+    "decisions": [
+      [
+        "Personalization is a conversation",
+        "Suggested interests and sources are starting points. The reader can accept, reject, or add their own; selected interests survive another suggestion round."
+      ],
+      [
+        "Research quality starts before writing",
+        "Source suggestions examine publisher evidence and recurring learning value. Separate page, feed, linked-page, and site-search modes make the intended coverage explicit."
+      ],
+      [
+        "Audio is a deliberate product choice",
+        "Text comes first. A listener requests speech when needed; matching verified audio can be reused. A listening-time target is an estimate until the generated recording is measured."
+      ],
+      [
+        "A web request should not own a long research job",
+        "The Next.js app accepts the request and saves its state. A separate worker handles retrieval, generation, audio, and schedules, so progress and failures can be revisited."
+      ]
+    ],
+    "outcome": "The implementation connects topic and source suggestions, cited briefs, saved history, recurring settings, and requested audio. The repository includes product decisions and walkthroughs using synthetic data. Live deployment is on the way.",
+    "lesson": "The useful unit is a learning experience that fits a person’s interests, attention, and time—not simply a shorter article.",
+    "sources": [
+      [
+        "Product overview",
+        "https://github.com/hieu-nguyen-nth/afield/blob/main/README.md"
+      ],
+      [
+        "System architecture",
+        "https://github.com/hieu-nguyen-nth/afield/blob/main/docs/technical/ARCHITECTURE.md"
+      ],
+      [
+        "Product decisions",
+        "https://github.com/hieu-nguyen-nth/afield/blob/main/docs/PRODUCT-DECISIONS.md"
+      ]
+    ]
+  },
+  "spotify-insight-pipeline": {
+    "lede": "An evidence pipeline for a product decision: which customer problems deserve investigation, and how much confidence should a team place in the ranking?",
+    "problem": "A large review dataset can produce an impressive chart without a trustworthy product recommendation. Topic labels are judgments, review volume is not the same as harm, and a priority score can hide uncertainty. I wanted to connect raw feedback to a recommendation that a reader could inspect, challenge, and trace back to the original reviews.",
+    "approach": "I used a Codex-assisted workflow to define and review the pipeline, Jev for bounded language-classification tasks, Python and SQL for data preparation and arithmetic, and local Qwen for issue names and recommendation drafts. The run ingested 660,622 source rows and completed classification for 244,582 original reviews. The dashboard publishes saved findings and selected evidence; visiting it does not trigger another model call.",
+    "flow_title": "Language judgment, deterministic scoring, human review",
+    "flow_note": "The same review IDs travel through the pipeline. Models interpret text; code preserves provenance, controls execution, and calculates priorities.",
+    "steps": [
+      [
+        [
+          "human",
+          "code"
+        ],
+        "Define & prepare",
+        "Set the rubric, preserve original IDs, profile the CSV, quarantine empty text, and queue pending reviews.",
+        "Codex-assisted workflow · Python / SQL"
+      ],
+      [
+        [
+          "ai",
+          "code"
+        ],
+        "Classify the language",
+        "Jev labels topic and intent, then judges severity for complaints and cancellations. Code validates IDs, schema, and exact quotes.",
+        "Jev · Python · SQLite"
+      ],
+      [
+        [
+          "ai",
+          "human"
+        ],
+        "Check disagreements",
+        "A separate blind Jev task re-labels 1,000 texts without the first labels. Inspect differences alongside the human-labeled diagnostic.",
+        "Separate task, not a separate model"
+      ],
+      [
+        [
+          "code"
+        ],
+        "Calculate priorities",
+        "Group completed complaint/cancellation reviews, sum severity, and apply stable tie-breaking rules.",
+        "Python / SQL · VADER sentiment separately"
+      ],
+      [
+        [
+          "ai",
+          "human"
+        ],
+        "Draft & review actions",
+        "Local Qwen proposes names and actions from bounded metrics and quotes. Editorial review checks claims and recommendations.",
+        "Qwen · evidence review"
+      ],
+      [
+        [
+          "tools",
+          "code"
+        ],
+        "Publish saved evidence",
+        "Serve reviewed aggregates and selected source examples in a read-only dashboard.",
+        "Supabase · Python backend · dashboard"
+      ]
+    ],
+    "decisions": [
+      [
+        "Use different tools for different kinds of work",
+        "Jev handles bounded interpretation. Qwen drafts language locally. Python owns scores, membership, validation, caching, and checkpoints. VADER supplies a separate sentiment signal; it does not enter the severity-sum ranking."
+      ],
+      [
+        "Treat evaluation as a diagnostic",
+        "The frozen 50-review test had 68% topic agreement and 92% intent agreement with the original human labels. Those are agreement measures, not an adjudicated accuracy claim. The separate blind task exposes disagreements without treating a second prediction as ground truth."
+      ],
+      [
+        "Show sensitivity before making a roadmap call",
+        "Usability led the baseline by only 4.4% over playback. Excluding review-flagged records reversed their order, although that exclusion has its own bias. The recommendation became: investigate usability and playback together before allocating next-quarter effort."
+      ],
+      [
+        "Make long runs resumable and inspectable",
+        "SQLite stores completed IDs and processing state. Exact-text reuse is tied to matching model and prompt settings. Code validates quoted evidence and preserves original review IDs rather than asking a model to invent totals."
+      ]
+    ],
+    "outcome": "The completed subset contains 244,582 classified originals and 15,825 complaint/cancellation reviews used in the baseline ranking. Completion depended on processing stage and intent, so findings describe this subset rather than the full review population. The live dashboard connects priorities, recommendations, and selected source evidence.",
+    "lesson": "A defensible product recommendation needs both a signal and an explanation of what could change the decision.",
+    "sources": [
+      [
+        "Pipeline overview & evaluation",
+        "https://github.com/hieu-nguyen-nth/spotify-insight-pipeline/blob/main/README.md"
+      ],
+      [
+        "Architecture & model roles",
+        "https://github.com/hieu-nguyen-nth/spotify-insight-pipeline/blob/main/ARCHITECTURE.md"
+      ],
+      [
+        "Decision memo",
+        "https://github.com/hieu-nguyen-nth/spotify-insight-pipeline/blob/main/reports/completed_subset/memo.md"
+      ]
+    ]
+  },
+  "personal-recruiting-system": {
+    "lede": "A personal recruiting workflow designed to preserve context: learn once, reuse evidence, and resume work without reconstructing it from scattered chats.",
+    "problem": "Job discovery, company research, relationship notes, and résumé preparation often become separate activities. Two roles at one company can lead to duplicate research; a new chat can lose the last decision; a polished draft can drift beyond the candidate’s actual experience. The product problem was continuity and evidence, not the absence of another application.",
+    "approach": "I designed a coordinator that routes work through reusable methods for evaluation, company research, networking, tailoring, and QA. Notion holds durable Jobs, Companies, People, and Events records. Candidate evidence stays in private source files. The public repository is a reference implementation with a fully fictional worked case, allowing readers to inspect the method without exposing personal recruiting records.",
+    "flow_title": "One request, shared context, explicit handoffs",
+    "flow_note": "The coordinator runs through an assistant. Methods are instructions, not a custom rules engine; connectors and shared records provide the operational tools and state.",
+    "steps": [
+      [
+        [
+          "human"
+        ],
+        "Choose the task",
+        "Ask to research a company, assess a role, update relationship context, or prepare an application.",
+        "Human priorities & stopping point"
+      ],
+      [
+        [
+          "ai",
+          "method"
+        ],
+        "Route the work",
+        "Read the current record and choose the relevant specialist method and evidence.",
+        "Assistant coordinator · reusable skills"
+      ],
+      [
+        [
+          "ai",
+          "tools"
+        ],
+        "Research & connect",
+        "Retrieve sources, reuse company learning, and connect roles, people, and event context.",
+        "Research tools · job source · Notion"
+      ],
+      [
+        [
+          "ai",
+          "method"
+        ],
+        "Prepare supported changes",
+        "Map role requirements to original candidate stories; propose exact résumé edits with evidence.",
+        "Tailoring method · private evidence"
+      ],
+      [
+        [
+          "ai",
+          "human"
+        ],
+        "Run a separate QA pass",
+        "Check the actual draft against the JD and raw evidence; surface unsupported scope or claims for correction.",
+        "Independent review pass · human judgment"
+      ],
+      [
+        [
+          "human",
+          "tools"
+        ],
+        "Review & continue",
+        "Save the draft, open questions, and next step. The person decides, sends outreach, and submits.",
+        "Notion state · human action"
+      ]
+    ],
+    "decisions": [
+      [
+        "Use a durable information model",
+        "One company can link to many jobs. Company research is reused; individual conversations stay with the person, and shared event insights remain on the event. That reduces duplicated context and preserves the reason behind a follow-up."
+      ],
+      [
+        "Separate research from candidate evaluation",
+        "A company can be understood without a specific job or résumé. Role fit and application positioning are separate tasks, so the same business research remains useful across opportunities."
+      ],
+      [
+        "Keep generation and review distinct",
+        "Tailoring proposes changes from evidence. QA reviews the actual draft against the job and original stories. A separate pass can catch shared assumptions, but it is not a claim of a separate evaluator model or guaranteed truth."
+      ],
+      [
+        "Prefer methods over unnecessary infrastructure",
+        "The system uses an assistant, connectors, private files, and Notion. No custom website or continuously running coordinator is required. Bounded scans record coverage and unfinished work; configured automation still needs actual execution checks."
+      ]
+    ],
+    "outcome": "The fictional case follows two roles at one company through evaluation, research, relationship context, supported edits, and QA corrections. It makes the handoffs and rejected claims inspectable. The repository demonstrates the workflow design; it does not contain a live installation, account configuration, or the user’s private candidate records.",
+    "lesson": "The value of an agent workflow is the quality of its handoffs: what it reads, what it changes, what it verifies, and what the human decides.",
+    "sources": [
+      [
+        "System overview & worked case",
+        "https://github.com/hieu-nguyen-nth/personal-recruiting-system/blob/main/README.md"
+      ],
+      [
+        "Architecture & handoffs",
+        "https://github.com/hieu-nguyen-nth/personal-recruiting-system/blob/main/docs/architecture.md"
+      ],
+      [
+        "Design decisions",
+        "https://github.com/hieu-nguyen-nth/personal-recruiting-system/blob/main/docs/design-decisions.md"
+      ]
+    ]
+  }
+}

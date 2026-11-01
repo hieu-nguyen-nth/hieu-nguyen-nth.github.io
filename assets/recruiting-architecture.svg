@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1250" viewBox="0 0 1200 1250" role="img" aria-labelledby="title desc">
+<title id="title">Ideal system · reference architecture</title><desc id="desc">Generic target architecture: a verified scheduled runtime or a user request enters a coordinator that routes five specialist methods. Jobs, Companies, People and Events hold operational records. Private evidence supports research, networking, tailoring and independent QA. Configured document tools produce checked application files; humans approve, contact and submit. This is a design, not an availability or deployment claim.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L7 4L0 8" fill="#7b8ba2"/></marker></defs>
+<rect x="0" y="0" width="1200" height="1250" rx="0" fill="#f8fafc" stroke="#f8fafc" stroke-width="1.5"/>
+<text x="48" y="58" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="600" text-anchor="start">Ideal system · reference architecture</text>
+<text x="48" y="91" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">6 reusable skill modules · verified runtime · complete application workflow</text>
+<rect x="48" y="124" width="348" height="112" rx="14" fill="#e1f2ed" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="222" y="158" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle">Scheduled discovery</text>
+<text x="222" y="189" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle">Verified local or cloud runtime</text>
+<text x="222" y="218" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="middle">Choose and test tool access</text>
+<rect x="444" y="124" width="708" height="112" rx="14" fill="#eee9fa" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="798" y="158" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle">When you ask</text>
+<text x="798" y="190" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="middle">Evaluate a role · research a company · find or update people</text>
+<text x="798" y="220" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle">Prepare an application · stop or resume at a named step</text>
+<path d="M222 236 L222 270" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M798 236 L798 270" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="48" y="270" width="1104" height="110" rx="14" fill="#eee9fa" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="600" y="306" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle">Recruiting coordinator · reusable orchestration</text>
+<text x="600" y="338" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="middle">Routes requests · loads evidence · saves progress and the next action</text>
+<text x="600" y="366" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle">Scheduled runs use the Jobs path; other workflows run when requested.</text>
+<path d="M600 380 L600 402" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round"/>
+<path d="M177 402 L1023 402" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round"/>
+<path d="M177 402 L177 428" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M459 402 L459 428" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M741 402 L741 428" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1023 402 L1023 428" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="48" y="428" width="258" height="175" rx="14" fill="#e1f2ed" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="177" y="465" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="middle">Jobs</text>
+<text x="177" y="502" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="middle">Discover / screen / evaluate</text>
+<text x="177" y="532" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="middle">Deadlines + unknowns</text>
+<text x="177" y="578" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="middle">evaluate-job</text>
+<path d="M177 603 L177 625" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round"/>
+<rect x="330" y="428" width="258" height="175" rx="14" fill="#eee9fa" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="459" y="465" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="middle">Company intelligence</text>
+<text x="459" y="502" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="middle">Quick / standard / deep</text>
+<text x="459" y="532" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="middle">Business + product + PM</text>
+<text x="459" y="578" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="middle">research-company</text>
+<path d="M459 603 L459 625" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round"/>
+<rect x="612" y="428" width="258" height="175" rx="14" fill="#eee9fa" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="741" y="465" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="middle">Networking</text>
+<text x="741" y="502" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="middle">Contacts + event insights</text>
+<text x="741" y="532" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="middle">Personal chats in People</text>
+<text x="741" y="578" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="middle">manage-networking</text>
+<path d="M741 603 L741 625" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round"/>
+<rect x="894" y="428" width="258" height="175" rx="14" fill="#eee9fa" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="1023" y="465" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="middle">Resume + QA</text>
+<text x="1023" y="502" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="middle">Position, tailor and review</text>
+<text x="1023" y="532" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="middle">Text proposals + content QA</text>
+<text x="1023" y="578" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="middle">tailor-resume + resume-qa</text>
+<path d="M1023 603 L1023 625" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round"/>
+<path d="M177 625 L1023 625" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round"/>
+<text x="600" y="657" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="middle">Read / update shared records; read authoritative private evidence</text>
+<path d="M413 625 L413 637" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round"/>
+<path d="M413 666 L413 690" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M978 625 L978 637" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round"/>
+<path d="M978 690 L978 666" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="48" y="690" width="730" height="234" rx="14" fill="#ffffff" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="72" y="729" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="start">Recruiting HQ in Notion</text>
+<rect x="68" y="750" width="168" height="113" rx="10" fill="#f1f5f9" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="152" y="783" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" text-anchor="middle">Jobs</text>
+<text x="152" y="816" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" text-anchor="middle">JDs + evaluations</text>
+<text x="152" y="842" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" text-anchor="middle">Preparation progress</text>
+<rect x="242" y="750" width="168" height="113" rx="10" fill="#f1f5f9" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="326" y="783" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" text-anchor="middle">Companies</text>
+<text x="326" y="816" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" text-anchor="middle">Briefs + insights</text>
+<text x="326" y="842" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" text-anchor="middle">Many jobs per company</text>
+<rect x="416" y="750" width="168" height="113" rx="10" fill="#f1f5f9" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="500" y="783" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" text-anchor="middle">People</text>
+<text x="500" y="816" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" text-anchor="middle">Profile + next action</text>
+<text x="500" y="842" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" text-anchor="middle">Personal chat toggles</text>
+<rect x="590" y="750" width="168" height="113" rx="10" fill="#f1f5f9" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="674" y="783" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" text-anchor="middle">Events</text>
+<text x="674" y="816" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" text-anchor="middle">General insights</text>
+<text x="674" y="842" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" text-anchor="middle">Company / people links</text>
+<text x="72" y="898" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Each JD links to 1 company; companies / people / events link many-to-many</text>
+<rect x="804" y="690" width="348" height="234" rx="14" fill="#ffffff" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="978" y="729" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Private evidence</text>
+<text x="978" y="771" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle">Master resume · story bank</text>
+<text x="978" y="802" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle">Bullet bank · skills inventory</text>
+<text x="978" y="833" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle">Private playbook + corrections</text>
+<text x="978" y="898" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="middle">Canonical files + dated references</text>
+<path d="M413 924 L413 946 L222 946 L222 972" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="48" y="972" width="348" height="104" rx="14" fill="#e1f2ed" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="222" y="1009" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle">Actionable digest</text>
+<text x="222" y="1042" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle">Roles, unknowns and next actions</text>
+<path d="M978 924 L978 946 L798 946 L798 972" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="444" y="972" width="708" height="104" rx="14" fill="#eee9fa" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="798" y="1009" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="middle">Document preparation + exact-file QA</text>
+<text x="798" y="1042" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle">Copy template · editable draft · PDF export · layout / text check</text>
+<path d="M222 1076 L222 1110" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M798 1076 L798 1110" fill="none" stroke="#7b8ba2" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="48" y="1110" width="1104" height="76" rx="14" fill="#fff0d5" stroke="#c5cfde" stroke-width="1.5"/>
+<text x="600" y="1142" fill="#172338" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="middle">Human review, corrections and final approval → outreach / submission</text>
+<text x="600" y="1171" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle">Use configured document tools. Preserve the original template; recheck revisions before finalizing.</text>
+<text x="48" y="1221" fill="#46566d" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Target design · capabilities must be configured and verified · no personal deployment status or candidate data</text>
+</svg>

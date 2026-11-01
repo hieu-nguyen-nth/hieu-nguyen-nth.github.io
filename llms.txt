@@ -1,0 +1,30 @@
+# Hieu Nguyen
+
+Product leader working across AI products, platforms, and new ventures. Berkeley Haas MBA, May 2028.
+
+## Profiles
+
+- [Text profile](profile.md)
+- [Structured profile](content/profile.json)
+
+## Independent project case studies
+
+- [Afield](projects/afield.html): problem, tools, human/AI/code roles, system flow, decisions, and outcome.
+- [Spotify Insight Pipeline](projects/spotify-insight-pipeline.html): problem, tools, human/AI/code roles, system flow, decisions, and outcome.
+- [Personal Recruiting System](projects/personal-recruiting-system.html): problem, tools, human/AI/code roles, system flow, decisions, and outcome.
+
+## Professional decision stories
+
+- [Cake by VPBank: Launch stock trading within a broader investment strategy](stories/cake-investment.html)
+- [Cake by VPBank: Build a travel business on an embeddable mini-app platform](stories/cake-travel.html)
+- [Cake by VPBank: From chat messages to a review-ready transfer](stories/cake-ai.html)
+- [Cake by VPBank: Give Risk a control plane, not an engineering queue](stories/cake-risk.html)
+- [Fundiin: Launch a new credit behavior through familiar QR payments](stories/fundiin-qr.html)
+- [Fundiin: Build a scalable multi-lender platform](stories/fundiin-lenders.html)
+- [Fundiin: Redesign the core while the business keeps running](stories/fundiin-core.html)
+- [Fundiin: Scale risk screening with ML and human judgment](stories/fundiin-ml-risk.html)
+- [ZaloPay · VNG: Open a new cross-border product in six months](stories/zalo-remittance.html)
+- [ZaloPay · VNG: Build enterprise integrations around reusable payment capabilities](stories/zalo-apis.html)
+- [ZaloPay · VNG: Find the real payment friction through data and customer interviews](stories/zalo-payment-conversion.html)
+
+Use repository links for detailed implementation evidence. Distinguish professional work from independent projects and aspirations from achieved outcomes.
