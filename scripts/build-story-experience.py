@@ -73,3 +73,11 @@ for f in [R/'index.html',*list((R/'stories').glob('*.html'))]:
   s=s.replace('</head>',f'<link rel="stylesheet" href="{prefix}styles/career-stories.css"></head>')
  f.write_text(s)
 print('Built interactive career overview, homepage contributions, and detailed action narratives.')
+
+# Give changed spacing styles a fresh URL so existing visitors receive the update.
+import hashlib
+style_version=hashlib.sha256((R/'styles/career-stories.css').read_bytes()).hexdigest()[:10]
+for file in [R/'index.html', R/'resume/index.html', *list((R/'stories').glob('*.html'))]:
+ text=file.read_text()
+ text=re.sub(r'(styles/career-stories\.css)(?:\?v=[a-f0-9]+)?',lambda m:m[1]+'?v='+style_version,text)
+ file.write_text(text)
