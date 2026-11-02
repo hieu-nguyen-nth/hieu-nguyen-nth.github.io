@@ -44,7 +44,7 @@ def refresh_company(match):
  return prefix+f'<details class="story-collection"><summary>Explore {len(selected)} product stories <span aria-hidden="true">+</span></summary><div class="company-stories">'+previews+'</div></details></article>'
 index=re.sub(r'<article class="company-card">.*?</article>',refresh_company,index,flags=re.S)
 for i,st in enumerate(p['career_stories']):
- d=stories[st['id']];path='stories/'+st['id']+'.html';st['detail_page']=path
+ d=stories[st['id']];st['actions']=d.get('actions',[]);st['strengths']=d.get('skills',[]);path='stories/'+st['id']+'.html';st['detail_page']=path
  # Preserve native expansions; add a page link after the preview narrative.
  pattern=r'(<details class="career-story" id="'+re.escape(st['id'])+r'">)(.*?)(</details>)'
  def attach(m):
@@ -64,10 +64,14 @@ for x in p['education']:md+=f'### {x["school"]}\n\n{x["degree"]} | {x["graduatio
 md+='## Independent projects\n\n'
 for x in p['projects']:md+=f'### {x["title"]}\n\n{x["summary"]}\n\n{x["problem"]}\n\n{x["approach"]}\n\nStack: {", ".join(x["stack"])}.\n\nStatus: {x["status"]}. {x["evidence"]}\n\n[Full case study]({x["detail_page"]}) · [Repository]({x["repo"]})\n\n'
 md+='## Selected professional stories\n\n'
-for x in p['career_stories']:md+=f'### {x["company"]} — {x["title"]}\n\nChallenge: {x["problem"]}\n\nMy contribution: {x["decision"]}\n\nResult: {x["outcome"]}\n\n[Full decision story]({x["detail_page"]})\n\n'
+for x in p['career_stories']:md+=f'### {x["company"]} — {x["title"]}\n\nChallenge: {x["problem"]}\n\nMy contribution: {x["decision"]}\n\nResult: {x["outcome"]}\n\n' + ''.join(f'- {title}: {copy}\n' for title,copy in x.get('actions',[])) + f'\n[Full decision story]({x["detail_page"]})\n\n'
 md+='## Interests\n\n'+', '.join(p['interests'])+'\n\n## Links\n\n'+'\n'.join(f'- {k.title()}: {v}' for k,v in p['links'].items())+'\n\n'+p['content_note']+'\n'
 (R/'profile.md').write_text(md);(R/'content/profile.json').write_text(json.dumps(p,indent=2,ensure_ascii=False)+'\n')
 index=re.sub(r'(<pre id="profile-text"[^>]*>).*?(</pre>)',lambda m:m[1]+E(md)+m[2],index,flags=re.S)
 (R/'index.html').write_text(index)
 (R/'llms.txt').write_text('# Hieu Nguyen\n\nProduct leader working across AI products, platforms, and new ventures. Berkeley Haas MBA, May 2028.\n\n## Profiles\n\n- [Text profile](profile.md)\n- [Structured profile](content/profile.json)\n\n## Independent project case studies\n\n'+''.join(f'- [{x["title"]}]({x["detail_page"]}): problem, tools, human/AI/code roles, system flow, decisions, and outcome.\n' for x in p['projects'])+'\n## Professional decision stories\n\n'+''.join(f'- [{x["company"]}: {x["title"]}]({x["detail_page"]})\n' for x in p['career_stories'])+'\nUse repository links for detailed implementation evidence. Distinguish professional work from independent projects and aspirations from achieved outcomes.\n')
 print(f'Built {len(p["projects"])} project case studies and {len(p["career_stories"])} career stories; linked expansions and synchronized profile sources.')
+
+# Keep the reading experience in sync with the same career-story evidence.
+import runpy
+runpy.run_path(str(R/'scripts/build-story-experience.py'))

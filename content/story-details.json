@@ -10,6 +10,30 @@
       "AI extracts payment details",
       "Structured transfer draft",
       "Customer reviews & authorizes"
+    ],
+    "bullet": "Shipped text/image transfer parsing with ~80% correct prefilling, keeping customer review and authorization explicit.",
+    "skills": [
+      "AI product strategy",
+      "Human-in-the-loop design",
+      "Product enablement"
+    ],
+    "actions": [
+      [
+        "Started from an everyday behavior",
+        "Customers receive payment details in chats and screenshots. I framed the product around removing re-entry, rather than adding an open-ended banking chatbot."
+      ],
+      [
+        "Drew the AI boundary",
+        "Separated input interpretation and transaction drafting from banking validation and customer authorization. Voice banking stayed on a research/prototype track."
+      ],
+      [
+        "Made prototypes reviewable",
+        "Supplied flows, component rules, typography, and interaction logic to AI-assisted prototyping; brought working drafts to engineers for refinement."
+      ],
+      [
+        "Scaled the method across the team",
+        "Created PRD and ticket workflows using PM-supplied context, including Jira publishing through MCP. Trained 10+ PMs; prototypes that took hours could be prepared in roughly 30 minutes."
+      ]
     ]
   },
   "cake-risk": {
@@ -23,6 +47,30 @@
       "Configurable rules",
       "Shared decision engine",
       "Controls across products"
+    ],
+    "bullet": "Cut fraud-control deployment from days to about one hour by giving Risk configurable rules across banking products.",
+    "skills": [
+      "Internal-customer discovery",
+      "Workflow design",
+      "Cross-team platform delivery"
+    ],
+    "actions": [
+      [
+        "Interviewed the internal customer",
+        "Reviewed existing engines and Risk workflows to see where policy changes became engineering requests and release dependencies."
+      ],
+      [
+        "Changed ownership of the bottleneck",
+        "Translated policies and data variables into configurable rules, so Risk could operate controls rather than queue every change with a product team."
+      ],
+      [
+        "Prototyped the control plane",
+        "Built an admin prototype and aligned backend, mobile, web portal, card, Risk, and customer-service teams on the operating workflow."
+      ],
+      [
+        "Protected the first release",
+        "Prioritized rule and policy management. Kept investigation tooling and broader event aggregation on a follow-on path instead of delaying the core capability."
+      ]
     ]
   },
   "fundiin-qr": {
@@ -36,6 +84,30 @@
       "Eligible credit offer",
       "Clear terms & confirmation",
       "Usage informs the next investment"
+    ],
+    "bullet": "Took QR Pay-Later from discovery to launch: 20K users in month one and 50% of company loan volume within eight months.",
+    "skills": [
+      "Customer discovery",
+      "0-to-1 product leadership",
+      "MVP sequencing"
+    ],
+    "actions": [
+      [
+        "Identified the distribution constraint",
+        "Merchant-by-merchant installment acceptance limited everyday use. I combined QR payment behavior, competitor research, and customer discovery to test a broader credit interaction."
+      ],
+      [
+        "Tested the behavior before rebuilding",
+        "Chose an MVP on the existing lending core, accepting flexibility limits to learn whether customers would understand and use QR-based credit."
+      ],
+      [
+        "Connected experience and risk",
+        "Defined scanning, eligible offers, clear terms, and confirmation while working with leadership on risk appetite and launch decisions."
+      ],
+      [
+        "Gave junior colleagues real ownership",
+        "Coached research, the business case, product artifacts, and developer coordination while remaining accountable for direction and cross-functional delivery."
+      ]
     ]
   },
   "fundiin-lenders": {
@@ -50,7 +122,31 @@
       "Institution-specific adapters",
       "5+ connected lenders"
     ],
-    "current_context": "The original launch outcome covered three financial institutions. Hieu’s subsequent update states that the platform now connects 5+ lenders; it does not establish a new funding-capacity figure or attribute every later integration to the original launch."
+    "current_context": "The original launch outcome covered three financial institutions. Hieu’s subsequent update states that the platform now connects 5+ lenders; it does not establish a new funding-capacity figure or attribute every later integration to the original launch.",
+    "bullet": "Expanded monthly funding capacity from $2M to $20M by launching a multi-lender platform across three financial institutions; it now connects 5+ lenders.",
+    "skills": [
+      "Platform strategy",
+      "Financial domain modeling",
+      "Executive influence"
+    ],
+    "actions": [
+      [
+        "Located the real growth ceiling",
+        "Customer demand could not grow the business without capital. I studied lender structures and translated funding concentration into a platform business case."
+      ],
+      [
+        "Defined common models and partner boundaries",
+        "Led product design around a shared internal loan model, matching and routing, and institution-specific adapters instead of rebuilding core flows for each lender."
+      ],
+      [
+        "Worked through the money movement",
+        "Aligned banks, payment providers, Finance, Legal, Risk, and Engineering on disbursement, repayment, fees, accounting entries, and reconciliation."
+      ],
+      [
+        "Protected delivery when knowledge was leaving",
+        "Mapped critical components threatened by engineering attrition and escalated a continuity plan to the CEO and CTO. Retained enough domain knowledge to finish delivery and transfer context."
+      ]
+    ]
   },
   "fundiin-core": {
     "framing": "Own what differentiates the business; integrate what does not.",
@@ -63,6 +159,30 @@
       "Reusable lending services",
       "Vendor gateways",
       "Phased channel migration"
+    ],
+    "bullet": "Led a 25-person core redesign and phased migration that enabled 4× loan-volume growth, 30% lower operating costs, and faster product launches.",
+    "skills": [
+      "Build-versus-buy",
+      "Technical product leadership",
+      "Migration leadership"
+    ],
+    "actions": [
+      [
+        "Reconstructed the inherited system",
+        "Worked through app, web, partner, and operational flows with the teams to identify duplicated rules, fragmented state, and constraints on repeated borrowing."
+      ],
+      [
+        "Chose a hybrid build-and-integrate approach",
+        "Kept differentiating lending logic in-house; integrated standardized identity and payment services behind common interfaces instead of building every component."
+      ],
+      [
+        "Turned the target into owned workstreams",
+        "Aligned new engineering leadership, assigned component work to product colleagues, and resolved dependencies across the 25-person cross-functional group."
+      ],
+      [
+        "Made migration an operating decision",
+        "Sequenced the transition while aligning Operations, Finance, and Accounting on data and readiness. The business had to keep running as its foundation changed."
+      ]
     ]
   },
   "zalo-remittance": {
@@ -76,6 +196,30 @@
       "Bank & compliance coordination",
       "Domestic wallet capabilities",
       "Recipient payout & reconciliation"
+    ],
+    "bullet": "Launched cross-border remittance in six months by aligning a 20-person team and the domestic capabilities needed for international partners.",
+    "skills": [
+      "Market entry",
+      "Regulated execution",
+      "Influence without authority"
+    ],
+    "actions": [
+      [
+        "Chose the ecosystem boundary",
+        "Assessed partner reach and market opportunity. Used overseas partners for origination while extending ZaloPay’s domestic wallet, bank connectivity, and payout capabilities."
+      ],
+      [
+        "Mapped the complete service",
+        "Connected partner onboarding, fund flows, compliance, settlement, reconciliation, recipient payout, and support rather than treating launch as an API handoff."
+      ],
+      [
+        "Stepped into a coordination gap",
+        "Created one integrated plan when surrounding program ownership was stretched. Made dependencies, resource needs, and decisions requiring senior sponsorship explicit."
+      ],
+      [
+        "Aligned teams beyond my reporting line",
+        "Led delivery across engineering squads, design, legal, compliance, operations, finance, and business while keeping product and program responsibilities clear."
+      ]
     ]
   },
   "zalo-apis": {
@@ -89,6 +233,30 @@
       "Payment capability & API contract",
       "Partner integration & certification",
       "Launch & operating feedback"
+    ],
+    "bullet": "Led enterprise payment integrations with Google, ByteDance, Grab, and Lazada; the portfolio grew ride-hailing transactions 50% and payout volume 40%.",
+    "skills": [
+      "B2B product discovery",
+      "API product design",
+      "Commercial prioritization"
+    ],
+    "actions": [
+      [
+        "Translated business models into payment flows",
+        "Worked with Business and Sales on partner opportunities, pitches, requirements, and solution design. Collection, disbursement, and pre-authorization needed different product models."
+      ],
+      [
+        "Avoided forcing payouts into a collection model",
+        "Defined the money-out journey with fund-flow, ledger, finance, and accounting requirements, rather than treating it as reversed checkout."
+      ],
+      [
+        "Built shared capabilities with explicit exceptions",
+        "Used common contracts and integration sequences where appropriate, while separating partner-specific experience and compliance requirements."
+      ],
+      [
+        "Owned the path to a working launch",
+        "Coordinated documentation, testing, partner readiness, operating contacts, go-live, and monitoring across both companies. Results describe the portfolio, not every named partner individually."
+      ]
     ]
   },
   "cake-investment": {
@@ -102,6 +270,30 @@
       "Stock-trading MVP",
       "Regulated partner integration",
       "Launch, revenue & phased expansion"
+    ],
+    "bullet": "Launched stock trading as the first step in a broader investment proposition, contributing an estimated $100K in annual revenue.",
+    "skills": [
+      "Product strategy",
+      "Commercial judgment",
+      "Regulated partner delivery"
+    ],
+    "actions": [
+      [
+        "Reframed the replacement decision",
+        "An ending fund partnership exposed a broader gap. I assessed market trends, competitor offers, and prior product behavior instead of sourcing another isolated investment widget."
+      ],
+      [
+        "Defined one experience over specialist partners",
+        "Proposed a centralized customer-facing investment layer, with licensed partners providing the capabilities underneath."
+      ],
+      [
+        "Sequenced a focused first launch",
+        "Prioritized securities account opening, funding, trading, market information, and watchlists. Broader portfolio features and other asset classes stayed in later phases."
+      ],
+      [
+        "Made cross-company delivery concrete",
+        "Mapped identity, account creation, orders, callbacks, reconciliation, and responsibility with the partner; translated the work into wireframes, requirements, milestones, and launch priorities."
+      ]
     ]
   },
   "cake-travel": {
@@ -115,6 +307,30 @@
       "Shared booking & payment model",
       "Embeddable mini-app",
       "Cake and partner distribution"
+    ],
+    "bullet": "Launched an embeddable travel mini-app generating $45K in its first six months, with a foundation for independent releases and partner distribution.",
+    "skills": [
+      "New ventures",
+      "Platform architecture",
+      "Build-versus-integrate"
+    ],
+    "actions": [
+      [
+        "Challenged the SDK-host model",
+        "Separate supplier interfaces and release schedules limited control of the journey. I combined market opportunity, customer needs, performance, and partner issues into the business case."
+      ],
+      [
+        "Chose what Cake should own",
+        "Kept discovery, booking, payment, and the customer journey under Cake’s control, while integrating specialist inventory through backend adapters."
+      ],
+      [
+        "Designed for more than one host",
+        "Used an embeddable mini-app and common booking model so travel releases could move independently of the native banking app and support other distribution channels."
+      ],
+      [
+        "Kept the launch focused",
+        "Led partner solution design, wireframes, requirements, and readiness around a flights MVP. Sequenced additional services and post-booking capabilities later."
+      ]
     ]
   },
   "fundiin-ml-risk": {
@@ -128,6 +344,30 @@
       "Evaluate in shadow mode",
       "Set thresholds & human review",
       "Stage deployment & monitor outcomes"
+    ],
+    "bullet": "Partnered with Data Science to deploy ML risk screening that reduced manual-review workload 50% across a $2M monthly lending portfolio.",
+    "skills": [
+      "ML product judgment",
+      "Evaluation tradeoffs",
+      "Risk operations"
+    ],
+    "actions": [
+      [
+        "Aligned on the cost of errors",
+        "Brought Risk, Data Science, and Engineering together around prediction targets, precision/coverage tradeoffs, and the customer and financial costs of wrong decisions."
+      ],
+      [
+        "Chose speed to learning over a custom stack",
+        "With limited data-science capacity, selected AutoML for the first iteration. Data Science owned model training; I connected business features, policy constraints, and the operating workflow."
+      ],
+      [
+        "Challenged misleading offline performance",
+        "Asked whether proposed signals would have existed at the original decision time, surfacing potential information leakage without treating later-known outcomes as usable inputs."
+      ],
+      [
+        "Validated before changing customer decisions",
+        "Ran alongside the existing process in shadow mode for roughly two to three months, inspected disagreements, then staged rollout with human review for uncertain cases."
+      ]
     ]
   },
   "zalo-payment-conversion": {
@@ -141,6 +381,30 @@
       "Interview & observe customers",
       "Test the cause, including reliability",
       "Experiment & measure conversion"
+    ],
+    "bullet": "Improved payment conversion 20% through SQL/Python funnel analysis, 20+ customer interviews, and 10 A/B-tested experiments.",
+    "skills": [
+      "Customer research",
+      "Product analytics",
+      "Hypothesis correction"
+    ],
+    "actions": [
+      [
+        "Fixed the measurement before optimizing",
+        "Found incomplete instrumentation and partner-flow errors. Added missing events and segmented the funnel by partner, step, device, and failure behavior with SQL and Python."
+      ],
+      [
+        "Used research to test the explanation",
+        "Combined 20+ customer interviews with usability testing. A drop-off chart could locate a problem, but customer accounts and observed behavior helped explain it."
+      ],
+      [
+        "Abandoned the layout hypothesis",
+        "Evidence pointed to intermittent downstream failures across a wider range of devices. I redirected attention to reliability before asking for another screen redesign."
+      ],
+      [
+        "Experimented after diagnosing the blockers",
+        "Led 10 A/B-tested changes across content, information hierarchy, CTA placement, button treatment, and flow simplification, contributing to the 20% conversion improvement."
+      ]
     ]
   }
 }

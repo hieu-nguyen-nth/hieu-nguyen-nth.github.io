@@ -94,6 +94,11 @@ My contribution: I shaped a broader investment proposition, then prioritized sto
 
 Result: The investment launch contributed an estimated $100K in annual revenue. The stock-trading launch was the first step; the broader multi-asset roadmap was phased rather than all launched together.
 
+- Reframed the replacement decision: An ending fund partnership exposed a broader gap. I assessed market trends, competitor offers, and prior product behavior instead of sourcing another isolated investment widget.
+- Defined one experience over specialist partners: Proposed a centralized customer-facing investment layer, with licensed partners providing the capabilities underneath.
+- Sequenced a focused first launch: Prioritized securities account opening, funding, trading, market information, and watchlists. Broader portfolio features and other asset classes stayed in later phases.
+- Made cross-company delivery concrete: Mapped identity, account creation, orders, callbacks, reconciliation, and responsibility with the partner; translated the work into wireframes, requirements, milestones, and launch priorities.
+
 [Full decision story](stories/cake-investment.html)
 
 ### Cake by VPBank — Build a travel business on an embeddable mini-app platform
@@ -103,6 +108,11 @@ Challenge: Separate partner SDKs fragmented the travel experience and left Cake 
 My contribution: I reframed the opportunity as a travel-commerce business with a shared customer journey. I led partner solution design, product requirements, architecture, and launch around a mini-app that could release independently and be embedded across distribution channels.
 
 Result: The in-app travel launch generated $45K in new revenue in its first six months. Its embeddable mini-app architecture enabled independent releases and distribution across banks and partners.
+
+- Challenged the SDK-host model: Separate supplier interfaces and release schedules limited control of the journey. I combined market opportunity, customer needs, performance, and partner issues into the business case.
+- Chose what Cake should own: Kept discovery, booking, payment, and the customer journey under Cake’s control, while integrating specialist inventory through backend adapters.
+- Designed for more than one host: Used an embeddable mini-app and common booking model so travel releases could move independently of the native banking app and support other distribution channels.
+- Kept the launch focused: Led partner solution design, wireframes, requirements, and readiness around a flights MVP. Sequenced additional services and post-booking capabilities later.
 
 [Full decision story](stories/cake-travel.html)
 
@@ -114,6 +124,11 @@ My contribution: I drove the text/image transfer experience that extracts paymen
 
 Result: The launched parsing experience correctly prefilled approximately 80% of inputs. I also trained 10+ PMs in AI-assisted prototyping and automation.
 
+- Started from an everyday behavior: Customers receive payment details in chats and screenshots. I framed the product around removing re-entry, rather than adding an open-ended banking chatbot.
+- Drew the AI boundary: Separated input interpretation and transaction drafting from banking validation and customer authorization. Voice banking stayed on a research/prototype track.
+- Made prototypes reviewable: Supplied flows, component rules, typography, and interaction logic to AI-assisted prototyping; brought working drafts to engineers for refinement.
+- Scaled the method across the team: Created PRD and ticket workflows using PM-supplied context, including Jira publishing through MCP. Trained 10+ PMs; prototypes that took hours could be prepared in roughly 30 minutes.
+
 [Full decision story](stories/cake-ai.html)
 
 ### Cake by VPBank — Give Risk a control plane, not an engineering queue
@@ -123,6 +138,11 @@ Challenge: Policy changes depended on product and engineering releases, leaving 
 My contribution: I worked with Risk to translate operational policies and data models into configurable controls, aligning backend, mobile, web, and operations teams around a shared platform.
 
 Result: Fraud controls could be deployed in about an hour instead of days, protecting products serving 700K+ monthly active users.
+
+- Interviewed the internal customer: Reviewed existing engines and Risk workflows to see where policy changes became engineering requests and release dependencies.
+- Changed ownership of the bottleneck: Translated policies and data variables into configurable rules, so Risk could operate controls rather than queue every change with a product team.
+- Prototyped the control plane: Built an admin prototype and aligned backend, mobile, web portal, card, Risk, and customer-service teams on the operating workflow.
+- Protected the first release: Prioritized rule and policy management. Kept investigation tooling and broader event aggregation on a follow-on path instead of delaying the core capability.
 
 [Full decision story](stories/cake-risk.html)
 
@@ -134,6 +154,11 @@ My contribution: I led discovery, the business case, roadmap, and launch of QR P
 
 Result: The product attracted 20K users in its first month and reached 50% of company loan volume within eight months.
 
+- Identified the distribution constraint: Merchant-by-merchant installment acceptance limited everyday use. I combined QR payment behavior, competitor research, and customer discovery to test a broader credit interaction.
+- Tested the behavior before rebuilding: Chose an MVP on the existing lending core, accepting flexibility limits to learn whether customers would understand and use QR-based credit.
+- Connected experience and risk: Defined scanning, eligible offers, clear terms, and confirmation while working with leadership on risk appetite and launch decisions.
+- Gave junior colleagues real ownership: Coached research, the business case, product artifacts, and developer coordination while remaining accountable for direction and cross-functional delivery.
+
 [Full decision story](stories/fundiin-qr.html)
 
 ### Fundiin — Build a scalable multi-lender platform
@@ -143,6 +168,11 @@ Challenge: A limited funding model put a ceiling on growth. Another one-off lend
 My contribution: I led the business case, product design, and launch of a standardized loan model with a scalable partner-integration layer. We launched with one lender while designing the shared foundations for additional institutions.
 
 Result: The launch expanded monthly funding capacity from $2M to $20M across three financial institutions. The platform now connects 5+ lenders. Funding capacity measures available capital, not actual monthly disbursement.
+
+- Located the real growth ceiling: Customer demand could not grow the business without capital. I studied lender structures and translated funding concentration into a platform business case.
+- Defined common models and partner boundaries: Led product design around a shared internal loan model, matching and routing, and institution-specific adapters instead of rebuilding core flows for each lender.
+- Worked through the money movement: Aligned banks, payment providers, Finance, Legal, Risk, and Engineering on disbursement, repayment, fees, accounting entries, and reconciliation.
+- Protected delivery when knowledge was leaving: Mapped critical components threatened by engineering attrition and escalated a continuity plan to the CEO and CTO. Retained enough domain knowledge to finish delivery and transfer context.
 
 [Full decision story](stories/fundiin-lenders.html)
 
@@ -154,6 +184,11 @@ My contribution: I led a 25-person team through a hybrid build-versus-buy strate
 
 Result: The redesign enabled 4× loan-volume growth, reduced operating costs by 30%, and halved product time-to-market.
 
+- Reconstructed the inherited system: Worked through app, web, partner, and operational flows with the teams to identify duplicated rules, fragmented state, and constraints on repeated borrowing.
+- Chose a hybrid build-and-integrate approach: Kept differentiating lending logic in-house; integrated standardized identity and payment services behind common interfaces instead of building every component.
+- Turned the target into owned workstreams: Aligned new engineering leadership, assigned component work to product colleagues, and resolved dependencies across the 25-person cross-functional group.
+- Made migration an operating decision: Sequenced the transition while aligning Operations, Finance, and Accounting on data and readiness. The business had to keep running as its foundation changed.
+
 [Full decision story](stories/fundiin-core.html)
 
 ### Fundiin — Scale risk screening with ML and human judgment
@@ -163,6 +198,11 @@ Challenge: Static risk rules were hard to maintain and missed combinations of si
 My contribution: I aligned Risk, Data Science, and Engineering on business goals, decision thresholds, and review boundaries. We used AutoML for the first iteration, validated in shadow mode, and staged the rollout while retaining human review for uncertain cases.
 
 Result: ML-based screening reduced manual-review workload by 50% across a $2M monthly lending portfolio. Data Science owned model development; my contribution connected business framing, evaluation, workflow design, and deployment.
+
+- Aligned on the cost of errors: Brought Risk, Data Science, and Engineering together around prediction targets, precision/coverage tradeoffs, and the customer and financial costs of wrong decisions.
+- Chose speed to learning over a custom stack: With limited data-science capacity, selected AutoML for the first iteration. Data Science owned model training; I connected business features, policy constraints, and the operating workflow.
+- Challenged misleading offline performance: Asked whether proposed signals would have existed at the original decision time, surfacing potential information leakage without treating later-known outcomes as usable inputs.
+- Validated before changing customer decisions: Ran alongside the existing process in shadow mode for roughly two to three months, inspected disagreements, then staged rollout with human review for uncertain cases.
 
 [Full decision story](stories/fundiin-ml-risk.html)
 
@@ -174,6 +214,11 @@ My contribution: I led a 20-person cross-functional team across Engineering, Des
 
 Result: We launched a new remittance product and revenue stream in six months, establishing infrastructure for cross-border transfers.
 
+- Chose the ecosystem boundary: Assessed partner reach and market opportunity. Used overseas partners for origination while extending ZaloPay’s domestic wallet, bank connectivity, and payout capabilities.
+- Mapped the complete service: Connected partner onboarding, fund flows, compliance, settlement, reconciliation, recipient payout, and support rather than treating launch as an API handoff.
+- Stepped into a coordination gap: Created one integrated plan when surrounding program ownership was stretched. Made dependencies, resource needs, and decisions requiring senior sponsorship explicit.
+- Aligned teams beyond my reporting line: Led delivery across engineering squads, design, legal, compliance, operations, finance, and business while keeping product and program responsibilities clear.
+
 [Full decision story](stories/zalo-remittance.html)
 
 ### ZaloPay · VNG — Build enterprise integrations around reusable payment capabilities
@@ -184,6 +229,11 @@ My contribution: I led B2B product and API integrations across partners includin
 
 Result: Across the enterprise portfolio, ride-hailing transactions grew 50%, payout volume grew 40%, and integrations acquired 100K users. These are portfolio results, not a claim that every partner delivered every metric.
 
+- Translated business models into payment flows: Worked with Business and Sales on partner opportunities, pitches, requirements, and solution design. Collection, disbursement, and pre-authorization needed different product models.
+- Avoided forcing payouts into a collection model: Defined the money-out journey with fund-flow, ledger, finance, and accounting requirements, rather than treating it as reversed checkout.
+- Built shared capabilities with explicit exceptions: Used common contracts and integration sequences where appropriate, while separating partner-specific experience and compliance requirements.
+- Owned the path to a working launch: Coordinated documentation, testing, partner readiness, operating contacts, go-live, and monitoring across both companies. Results describe the portfolio, not every named partner individually.
+
 [Full decision story](stories/zalo-apis.html)
 
 ### ZaloPay · VNG — Find the real payment friction through data and customer interviews
@@ -193,6 +243,11 @@ Challenge: Payment conversion showed users dropping out, but the aggregate funne
 My contribution: I combined SQL and Python analysis with 20+ customer interviews and usability testing. The research challenged an initial layout hypothesis and exposed downstream device-related reliability issues, changing what we prioritized before further UX experiments.
 
 Result: The work improved payment conversion by 20% through instrumentation fixes, customer insight, and 10 A/B-tested funnel experiments.
+
+- Fixed the measurement before optimizing: Found incomplete instrumentation and partner-flow errors. Added missing events and segmented the funnel by partner, step, device, and failure behavior with SQL and Python.
+- Used research to test the explanation: Combined 20+ customer interviews with usability testing. A drop-off chart could locate a problem, but customer accounts and observed behavior helped explain it.
+- Abandoned the layout hypothesis: Evidence pointed to intermittent downstream failures across a wider range of devices. I redirected attention to reliability before asking for another screen redesign.
+- Experimented after diagnosing the blockers: Led 10 A/B-tested changes across content, information hierarchy, CTA placement, button treatment, and flow simplification, contributing to the 20% conversion improvement.
 
 [Full decision story](stories/zalo-payment-conversion.html)
 

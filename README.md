@@ -33,3 +33,7 @@ Spacing preference: keep text and story previews concise, with a moderate visual
 ## Publishing updates
 
 Edit the source files, run `python3 scripts/build-detail-pages.py`, review locally, then commit and push to `main`. GitHub Pages automatically republishes the site. `.nojekyll` serves the prepared static files directly.
+
+## Interactive career stories
+
+`resume/index.html` pairs eleven career bullets with a desktop story reader; smaller screens use inline native disclosures. The same stories remain accessible as standalone pages. Homepage company entries summarize outcomes and offer a concise What I did expansion. `content/story-details.json` stores the specific actions and strengths; `scripts/build-story-experience.py` is called by the detail-page builder. Keep narrative claims grounded in the master story bank, with estimates and role boundaries intact.
