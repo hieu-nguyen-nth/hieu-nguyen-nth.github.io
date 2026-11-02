@@ -38,7 +38,7 @@ A global perspective on AI-native products, business models, and scaling across 
 
 Bachelor, Marketing Management | June 2021
 
-A foundation in bringing products to market: customer insight, product design, pricing, monetization, quality management, distribution, promotion, and advertising across physical, service, and digital businesses.
+Customer-led product design, pricing, quality, distribution, promotion, and monetization.
 
 ## Independent projects
 

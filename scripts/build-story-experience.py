@@ -19,11 +19,11 @@ company_notes={
  'Fundiin': {
   'focus':'0-to-1 credit products and the lending infrastructure to scale them.',
   'role':'Principal / Senior Product Manager',
-  'outcomes':[('10× funding capacity','$2M → $20M through a scalable multi-lender platform.'),('0-to-1 growth','QR Pay-Later reached 50% of loan volume within eight months.'),('Core transformation','4× loan-volume growth and 30% lower operating costs.')]
+  'outcomes':[('10× funding capacity','$2M → $20M through a scalable multi-lender platform.'),('0-to-1 growth','QR Pay-Later reached 50% of loan volume within eight months.'),('Core transformation','4× loan-volume growth and 30% lower operating costs.'),('Applied ML','50% less manual risk review across a $2M monthly portfolio.')]
  },
  'ZaloPay · VNG': {
   'focus':'Enterprise payments, new markets, and customer-led growth.',
-  'role':'Product Manager / Associate Product Manager',
+  'role':'Product Manager / Associate PM',
   'outcomes':[('Enterprise growth','+50% ride-hailing transactions, +40% payout volume, and 100K users acquired.'),('Market entry','Cross-border remittance launched in six months with a 20-person team.'),('Customer evidence','+20% payment conversion through research and experiments.')]
  }
 }
