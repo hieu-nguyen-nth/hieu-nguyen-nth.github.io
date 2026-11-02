@@ -24,7 +24,7 @@ Facts come from the resume supplied November 1, 2026, career-story materials, an
 
 ## Detail-page content and build
 
-`content/project-details.json` holds project narratives, role-labeled system flows, design decisions, and source links. `content/story-details.json` holds the eleven professional decision stories. Run `python3 scripts/build-detail-pages.py` after editing these files. It regenerates the detail pages, attaches full-story links to the native homepage expansions, and synchronizes the text/JSON profiles.
+`content/project-details.json` holds project narratives, role-labeled system flows, design decisions, and source links. `content/story-details.json` holds the eleven professional decision stories. Run `python3 scripts/build-detail-pages.py` after editing these files. It regenerates the detail pages, links homepage achievements directly to career stories, and synchronizes the text/JSON profiles.
 
 Theme: blue with restrained gold accents and a consistent system sans-serif. Green inside actual product screenshots belongs to the demonstrated product, not the portfolio theme. Keep the homepage concise; put useful depth, role boundaries, and implementation tradeoffs on the detail pages.
 
@@ -36,4 +36,4 @@ Edit the source files, run `python3 scripts/build-detail-pages.py`, review local
 
 ## Interactive career stories
 
-`resume/index.html` pairs eleven career bullets with a desktop story reader; smaller screens use inline native disclosures. The same stories remain accessible as standalone pages. Homepage company entries align in a shared work grid with selected achievements and one work-story expansion each; education sits in a unified band below. `content/story-details.json` stores the specific actions and strengths; `scripts/build-story-experience.py` is called by the detail-page builder. Keep narrative claims grounded in the master story bank, with estimates and role boundaries intact.
+`resume/index.html` pairs eleven career bullets with a desktop story reader; smaller screens use inline native disclosures. The same stories remain accessible as standalone pages. Homepage company entries form a connected journey with eleven concise achievements linked directly to full story pages. There are no homepage disclosure menus; education sits in a unified band below. `content/story-details.json` stores the specific actions and strengths; `scripts/build-story-experience.py` is called by the detail-page builder. Keep narrative claims grounded in the master story bank, with estimates and role boundaries intact.

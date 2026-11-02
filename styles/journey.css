@@ -1,0 +1,51 @@
+/* A connected career timeline with one direct destination per achievement. */
+.journey-section{background:linear-gradient(var(--line),var(--line)) top/100% 1px no-repeat;padding-top:27px;padding-bottom:27px}
+.journey-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:24px}
+.journey-heading h2{display:flex;align-items:center;gap:10px;font-size:26px;font-weight:500;letter-spacing:-.6px;line-height:1.3;margin:0}
+.journey-heading h2 svg{width:23px;height:23px;stroke:var(--accent);stroke-width:1.5;fill:none;flex-shrink:0}
+.journey-heading>.text-link{font-size:12px;color:var(--accent);white-space:nowrap}
+.journey-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;position:relative;align-items:start}
+.journey-track::before{content:'';position:absolute;left:24px;right:24px;top:24px;height:2px;background:linear-gradient(90deg,#b7c7fa,var(--accent),#c5b278);opacity:.65}
+.journey-step{position:relative;min-width:0}
+.journey-logo{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:#fff;box-shadow:0 4px 14px #253b7110;margin-bottom:11px}
+.journey-logo img{width:34px;height:34px;object-fit:contain}
+.journey-company{margin-bottom:10px}
+.journey-company h3{font-size:19px;font-weight:500;line-height:1.35;letter-spacing:-.3px;margin:0 0 5px}
+.journey-company p{font-size:12px;line-height:1.5;color:var(--accent);margin:0 0 3px}
+.journey-company>span{font-size:11px;line-height:1.5;color:var(--muted)}
+.journey-achievements{list-style:none;padding:4px 12px;margin:0;background:#edf1fa;border-radius:8px}
+.journey-achievements li{margin:0}
+.journey-achievements a{display:flex;align-items:start;gap:9px;padding:8px 0;font-size:13px;line-height:1.6;color:var(--muted);scroll-margin-top:24px}
+.journey-achievements li+li a{border-top:1px solid #dce3f1}
+.journey-achievements a>span:first-child{flex:1;min-width:0}
+.journey-achievements a:hover,.journey-achievements a:focus-visible{color:var(--accent)}
+.journey-arrow{color:var(--accent);font-size:14px;line-height:1.6;flex-shrink:0;opacity:.75}
+.journey-education{margin-top:20px;padding:17px 19px;background:#edf1fa;border-radius:8px}
+.journey-education>.eyebrow{font-size:10px;margin-bottom:13px}
+.journey-schools{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.journey-school{min-width:0}
+.journey-school-name{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.journey-school-name img{object-fit:contain;flex-shrink:0}
+.journey-school-name h3{font-size:16px;line-height:1.4;letter-spacing:-.2px;margin:0;font-weight:500}
+.journey-degree{font-size:12px;line-height:1.6;color:var(--muted);margin:0 0 8px}
+.journey-school-focus{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+@media(max-width:760px){
+ .journey-section{padding-top:27px;padding-bottom:27px}
+ .journey-heading{align-items:start;flex-direction:column;gap:12px;margin-bottom:23px}
+ .journey-heading h2{font-size:25px}
+ .journey-track{grid-template-columns:1fr;gap:25px;padding-left:20px}
+ .journey-track::before{left:0;top:24px;bottom:0;right:auto;width:2px;height:auto;background:linear-gradient(#b7c7fa,var(--accent),#c5b278)}
+ .journey-step::before{content:'';position:absolute;left:-23px;top:24px;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--paper)}
+ .journey-logo{width:50px;height:50px;margin-bottom:11px}
+ .journey-logo img{width:32px;height:32px}
+ .journey-company h3{font-size:19px}
+ .journey-company p{font-size:12px}
+ .journey-achievements{padding:3px 12px}
+ .journey-achievements a{font-size:14px;line-height:1.65;padding:8px 0}
+ .journey-education{margin-top:25px;padding:16px}
+ .journey-schools{grid-template-columns:1fr;gap:23px}
+ .journey-school-focus{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.journey-achievements a{transition:none}}
+
+.journey-achievements strong{font-weight:550;color:var(--ink)}

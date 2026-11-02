@@ -31,27 +31,9 @@ for i,x in enumerate(p['projects']):
  if i==0:x['evidence']='The repository includes the implementation, product decisions, and walkthroughs using synthetic data. Live deployment is on the way.'
 
 index=(R/'index.html').read_text()
-def refresh_company(match):
- card=match[0]
- name=html.unescape(re.search(r'<h3>(.*?)</h3>',card,re.S)[1])
- company=next(x for x in p['experience'] if x['organization']==name)
- card=re.sub(r'<p class="experience-summary">.*?</p>',lambda _: '<p class="experience-summary">'+E(company['summary'])+'</p>',card,flags=re.S)
- selected=[x for x in p['career_stories'] if x['company']==name]
- previews=''
- for st in selected:
-  previews+=f'<details class="career-story" id="{st["id"]}"><summary><span><small>{E(st["tag"])}</small>{E(st["title"])}</span><b aria-hidden="true">+</b></summary><div class="story-body"><div class="story-result"><strong>{E(st["metric"])}</strong><span>{E(st["metric_label"])}</span></div><div><h4>The challenge</h4><p>{E(st["problem"])}</p><h4>My decision & contribution</h4><p>{E(st["decision"])}</p><h4>The result</h4><p>{E(st["outcome"])}</p></div></div></details>'
- prefix=card[:card.index('<details class="story-collection">')]
- return prefix+f'<details class="story-collection"><summary>Explore {len(selected)} product stories <span aria-hidden="true">+</span></summary><div class="company-stories">'+previews+'</div></details></article>'
-index=re.sub(r'<article class="company-card">.*?</article>',refresh_company,index,flags=re.S)
 for i,st in enumerate(p['career_stories']):
  d=stories[st['id']];st['actions']=d.get('actions',[]);st['strengths']=d.get('skills',[]);path='stories/'+st['id']+'.html';st['detail_page']=path
- # Preserve native expansions; add a page link after the preview narrative.
- pattern=r'(<details class="career-story" id="'+re.escape(st['id'])+r'">)(.*?)(</details>)'
- def attach(m):
-  content=re.sub(r'<p class="full-story-link">.*?</p>','',m[2],flags=re.S)
-  return m[1]+content+f'<p class="full-story-link"><a class="text-link" href="{path}">Read the full story →</a></p>'+m[3]
- index=re.sub(pattern,attach,index,flags=re.S)
- body=f'''<main id="main" class="detail-main story-page"><a class="text-link" href="../index.html#experience">← Experience & education</a><header class="detail-heading"><p class="eyebrow">{E(st['company'])} / {E(st['tag'])}</p><h1>{E(st['title'])}</h1><p class="detail-lede">{E(d['framing'])}</p><p class="story-outcome">{E(st['outcome'])}</p><nav class="case-jump" aria-label="On this page"><a href="#context">Context</a><a href="#decision">Decision</a><a href="#delivery">Execution</a><a href="#result">Result</a></nav></header><section class="detail-section" id="context"><h2>The constraint</h2><p>{E(d['context'])}</p></section><section class="detail-section" id="decision"><h2>The decision I made</h2><p>{E(d['choice'])}</p></section><section class="decision-flow" aria-label="Conceptual product flow"><p class="eyebrow">THE PRODUCT LOGIC</p><ol>'''+''.join(f'<li><span>{n+1:02}</span>{E(step)}</li>' for n,step in enumerate(d['flow']))+f'''</ol></section><section class="detail-section" id="delivery"><h2>How I drove it forward</h2><p>{E(d['delivery'])}</p></section><section class="detail-section outcome-section" id="result"><h2>What changed</h2><p>{E(st['outcome'])}</p><p class="detail-takeaway">{E(d['lesson'])}</p></section><a class="text-link" href="../index.html#{st['id']}">Return to the concise story ↗</a>'''
+ body=f'''<main id="main" class="detail-main story-page"><a class="text-link" href="../index.html#experience">← Experience & education</a><header class="detail-heading"><p class="eyebrow">{E(st['company'])} / {E(st['tag'])}</p><h1>{E(st['title'])}</h1><p class="detail-lede">{E(d['framing'])}</p><p class="story-outcome">{E(st['outcome'])}</p><nav class="case-jump" aria-label="On this page"><a href="#context">Context</a><a href="#decision">Decision</a><a href="#delivery">Execution</a><a href="#result">Result</a></nav></header><section class="detail-section" id="context"><h2>The constraint</h2><p>{E(d['context'])}</p></section><section class="detail-section" id="decision"><h2>The decision I made</h2><p>{E(d['choice'])}</p></section><section class="decision-flow" aria-label="Conceptual product flow"><p class="eyebrow">THE PRODUCT LOGIC</p><ol>'''+''.join(f'<li><span>{n+1:02}</span>{E(step)}</li>' for n,step in enumerate(d['flow']))+f'''</ol></section><section class="detail-section" id="delivery"><h2>How I drove it forward</h2><p>{E(d['delivery'])}</p></section><section class="detail-section outcome-section" id="result"><h2>What changed</h2><p>{E(st['outcome'])}</p><p class="detail-takeaway">{E(d['lesson'])}</p></section><a class="text-link" href="../index.html#{st['id']}">Back to professional journey ↗</a>'''
  nxt=p['career_stories'][(i+1)%len(p['career_stories'])]
  body+=f'<a class="next-project text-link" href="{nxt["id"]}.html">Next story: {E(nxt["title"])} →</a></main>'
  (R/path).write_text(head(st['title'],d['framing'])+nav()+body+footer())
