@@ -22,3 +22,23 @@
 .career-history .experience-summary{margin-top:7px;margin-bottom:8px}.company-outcomes{margin-bottom:7px}.company-outcomes li{margin-bottom:8px}.career-history .story-collection>summary{padding:4px 0}.history-education{margin-top:16px;padding:14px 17px}.history-education>.column-label{margin-bottom:10px}.history-education .education-summary{margin-top:7px}.background-section .history-heading{margin-bottom:19px}
 @media(min-width:761px){.career-history{grid-template-rows:none;align-items:start}.career-history .company-card{display:block;grid-row:auto}.career-history .experience-summary{margin-top:7px;margin-bottom:8px}.company-outcomes{margin-bottom:7px}.company-outcomes li{margin-bottom:8px}.history-education{margin-top:16px;padding:14px 17px}.background-section{padding-top:29px;padding-bottom:29px}.background-section .history-heading{margin-bottom:19px}}
 @media(max-width:760px){.career-history{gap:23px}.career-history .experience-summary{margin-top:7px;margin-bottom:8px}.company-outcomes li{margin-bottom:8px}.history-education{margin-top:20px;padding:14px}.education-grid{gap:19px}}
+
+/* One text rail per company, matching the project section's reading flow. */
+#experience .history-heading{margin-bottom:31px}
+#experience .company-top,#experience .education-top{display:block}
+.company-identity,.education-identity{display:flex;align-items:center;gap:10px;margin-bottom:7px}
+#experience .company-identity h3,#experience .education-identity h3{margin:0}
+.company-identity .organization-logo,.education-identity>img{width:28px;height:28px;flex-shrink:0}
+.company-identity .organization-logo img{width:28px;height:28px}
+.education-identity>img{object-fit:contain}
+#experience .company-top .entry-meta,#experience .education-top .entry-meta{margin:0}
+#experience .entry-period{margin-top:2px}
+#experience .experience-summary{margin:10px 0 11px}
+#experience .company-outcomes{margin-left:0;padding-left:0}
+#experience .company-outcomes li{border:0;padding-left:0;margin-bottom:9px}
+#experience .story-collection{margin-left:0}
+#experience .story-collection>summary{display:inline-flex;justify-content:flex-start;gap:9px;width:auto}
+#experience .history-education .education-summary{margin:9px 0 0}
+#experience .career-story summary{justify-content:flex-start;gap:9px}
+#experience .career-story summary b{flex-shrink:0}
+@media(max-width:760px){#experience .history-heading{margin-bottom:27px}#experience .career-history{gap:27px}#experience .company-outcomes,#experience .story-collection{margin-left:0}}

@@ -12,7 +12,7 @@ def narrative(st):
 
 company_notes={
  'Cake by VPBank': {
-  'focus':'AI-first banking, platforms, and commercial new ventures.',
+  'focus':'AI banking, shared platforms, and investment and travel launches.',
   'role':'Senior Technical Product Manager (L5)',
   'outcomes':[('AI-first banking','LLM roadmaps, a shipped transfer experience, and 10+ PMs enabled.'),('New revenue','$100K estimated annual investment revenue; $45K from travel in six months.'),('Operating leverage','Risk-control deployment cut from days to about one hour.')]
  },
@@ -35,12 +35,12 @@ for exp in p['experience']:
  previews=''
  for st in selected:
   previews+=f'<details class="career-story" id="{st["id"]}"><summary><span><small>{E(st["tag"])}</small>{E(st["title"])}</span><b aria-hidden="true">+</b></summary><div class="story-body"><p>{E(st["problem"])}</p><h4>My contribution</h4><p>{E(st["decision"])}</p><h4>Impact</h4><p>{E(st["outcome"])}</p><a class="text-link" href="resume/#{st["id"]}">Explore this story in my resume ↗</a><a class="text-link full-page-link" href="{st["detail_page"]}">Open full page ↗</a></div></details>'
- company_html+=f'<article class="company-card"><div class="company-top"><span class="organization-logo"><img src="assets/organizations/{logos[name]}.png" alt="" width="32" height="32"></span><div><h3>{E(name)}</h3><p class="entry-meta">{E(note["role"])}</p><p class="entry-period">{E(exp["period"])}</p></div></div><p class="experience-summary">{E(note["focus"])}</p><ul class="company-outcomes">'+''.join(f'<li><p><span>{E(title)}.</span> {E(copy)}</p></li>' for title,copy in note['outcomes'])+f'</ul><details class="story-collection"><summary>Explore {len(selected)} work stories <span aria-hidden="true">+</span></summary><div class="company-stories">{previews}</div></details></article>'
+ company_html+=f'<article class="company-card"><div class="company-top"><div class="company-identity"><span class="organization-logo"><img src="assets/organizations/{logos[name]}.png" alt="" width="32" height="32"></span><h3>{E(name)}</h3></div><p class="entry-meta">{E(note["role"])}</p><p class="entry-period">{E(exp["period"])}</p></div><p class="experience-summary">{E(note["focus"])}</p><ul class="company-outcomes">'+''.join(f'<li><p><span>{E(title)}.</span> {E(copy)}</p></li>' for title,copy in note['outcomes'])+f'</ul><details class="story-collection"><summary>Explore {len(selected)} work stories <span aria-hidden="true">+</span></summary><div class="company-stories">{previews}</div></details></article>'
 education_html=''
 for i,x in enumerate(p['education']):
  school='Berkeley Haas' if i==0 else 'National Economics University'
- education_html+=f'<article class="education-entry"><div class="education-top"><img src="assets/organizations/{"berkeley" if i==0 else "neu"}.png" alt="" width="32" height="32"><div><h3>{school}</h3><p class="entry-meta">{E(x["degree"])} · {E(x["graduation"])}</p></div></div><p class="education-summary">{E(x["focus"])}</p></article>'
-home=f'<section id="experience" class="section background-section"><div class="history-heading"><div><p class="eyebrow">EXPERIENCE & EDUCATION</p><h2>Product leadership, in practice.</h2></div><a class="text-link" href="resume/">Explore my interactive resume ↗</a></div><div class="career-history">{company_html}</div><div class="history-education"><h3 class="column-label">Education</h3><div class="education-grid">{education_html}</div></div></section>'
+ education_html+=f'<article class="education-entry"><div class="education-top"><div class="education-identity"><img src="assets/organizations/{"berkeley" if i==0 else "neu"}.png" alt="" width="32" height="32"><h3>{school}</h3></div><p class="entry-meta">{E(x["degree"])} · {E(x["graduation"])}</p></div><p class="education-summary">{E(x["focus"])}</p></article>'
+home=f'<section id="experience" class="section background-section"><div class="history-heading"><div><p class="eyebrow">EXPERIENCE & EDUCATION</p><h2>From first launch to scale.</h2></div><a class="text-link" href="resume/">Explore my interactive resume ↗</a></div><div class="career-history">{company_html}</div><div class="history-education"><h3 class="column-label">Education</h3><div class="education-grid">{education_html}</div></div></section>'
 index=re.sub(r'<section id="experience".*?</section>(?=<section id="beyond")',lambda _:home,index,flags=re.S)
 index=index.replace('<a href="index.html#experience">Experience</a>', '<a href="index.html#experience">Experience</a><a href="resume/">Resume</a>') if '<a href="resume/">Resume</a>' not in index and '<a href="resume/">Resume</a>' not in index else index
 (R/'index.html').write_text(index)

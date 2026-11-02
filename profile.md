@@ -38,7 +38,7 @@ A global perspective on AI-native products, business models, and scaling across 
 
 Bachelor, Marketing Management | June 2021
 
-Customer-led product design, pricing, quality, distribution, promotion, and monetization.
+Marketing taught me to connect customer needs with product and business decisions. I apply that foundation to product design, pricing, quality, distribution, promotion, and monetization.
 
 ## Independent projects
 
