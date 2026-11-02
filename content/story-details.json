@@ -1,23 +1,27 @@
 {
   "cake-ai": {
-    "framing": "Use AI for interpretation; keep financial authorization explicit.",
-    "context": "A large part of everyday commerce happens in conversations. Customers receive an account number, amount, or payment description in a message or image, then have to re-enter it in a banking app. The opportunity was to remove that repeated work without turning a language model into the authority to move money.",
-    "choice": "I separated the experience into understanding the input, preparing a structured transaction, and customer review. The model handled unstructured payment information; banking services and the customer retained their roles in validation and authorization. Voice banking stayed on a separate research and prototype track.",
+    "framing": "Turn an AI-first banking strategy into useful customer products and a faster product operating model.",
+    "context": "Cake wanted AI to improve operating performance and make its AI-first banking proposition tangible. I split that direction into two tracks: customer-facing banking capabilities and internal PM productivity. Chat-based commerce exposed an everyday customer problem, while our lean product team spent hours turning requirements into prototypes, documentation, and tickets.",
+    "choice": "I prioritized AI use cases by frequency, effort saved, the consequence of a wrong answer, and whether banking services could validate the result. Text/image transfer drafting could solve a defined task while retaining customer authorization. Voice banking needed a longer research/prototype roadmap. Internally, I chose reusable workflows grounded in the PM’s product context rather than treating AI output as finished requirements.",
     "delivery": "Alongside the customer experience, I created AI-assisted PM workflows for prototypes, PRDs, and engineering tickets. The PM supplied the problem, scope, and product context, while the tools accelerated preparation. More than ten PMs were trained in the approach.",
-    "lesson": "AI capability becomes useful when its role in the customer journey is precise. Interpretation, validation, and authorization need different owners.",
+    "lesson": "My contribution was both product and organizational: decide where AI creates useful leverage, define its boundaries, and equip the team to use it. The roughly 50% improvement describes PM preparation effort across AI-assisted tasks, not an independently measured increase in engineering throughput.",
     "flow": [
       "Message or image",
       "AI extracts payment details",
       "Structured transfer draft",
       "Customer reviews & authorizes"
     ],
-    "bullet": "Shipped text/image transfer parsing with ~80% correct prefilling, keeping customer review and authorization explicit.",
+    "bullet": "Advanced Cake’s AI-first banking by driving LLM voice/text banking roadmaps, launching AI transfer parsing with ~80% accurate prefilling, and upskilling 10+ PMs in AI prototyping and automation to accelerate delivery by 50%.",
     "skills": [
       "AI product strategy",
       "Human-in-the-loop design",
       "Product enablement"
     ],
     "actions": [
+      [
+        "Translated strategy into two roadmaps",
+        "Defined a customer-product track for transfer assistance and voice-banking exploration, alongside an internal track for prototypes, PRDs, tickets, and product coordination. Kept production capabilities distinct from research."
+      ],
       [
         "Started from an everyday behavior",
         "Customers receive payment details in chats and screenshots. I framed the product around removing re-entry, rather than adding an open-ended banking chatbot."
@@ -48,7 +52,7 @@
       "Shared decision engine",
       "Controls across products"
     ],
-    "bullet": "Cut fraud-control deployment from days to about one hour by giving Risk configurable rules across banking products.",
+    "bullet": "Cut fraud-control deployment time from days to ~1 hour by designing a real-time risk engine with Risk team, translating operational workflows and data models into configurable tools protecting 700K+ monthly active users.",
     "skills": [
       "Internal-customer discovery",
       "Workflow design",
@@ -85,7 +89,7 @@
       "Clear terms & confirmation",
       "Usage informs the next investment"
     ],
-    "bullet": "Took QR Pay-Later from discovery to launch: 20K users in month one and 50% of company loan volume within eight months.",
+    "bullet": "Launched a 0-to-1 QR Pay-Later product that attracted 20K users in month one and reached 50% of company loan volume within eight months, owning customer discovery, product vision, roadmap, and cross-functional delivery.",
     "skills": [
       "Customer discovery",
       "0-to-1 product leadership",
@@ -123,7 +127,7 @@
       "5+ connected lenders"
     ],
     "current_context": "The original launch outcome covered three financial institutions. Hieu’s subsequent update states that the platform now connects 5+ lenders; it does not establish a new funding-capacity figure or attribute every later integration to the original launch.",
-    "bullet": "Expanded monthly funding capacity from $2M to $20M by launching a multi-lender platform across three financial institutions; it now connects 5+ lenders.",
+    "bullet": "Expanded monthly loan funding capacity 10x ($2M to $20M) by leading business case, product design, and launch of a scalable multi-lender platform with standardized loan models and integrations across 3 financial institutions.",
     "skills": [
       "Platform strategy",
       "Financial domain modeling",
@@ -160,7 +164,7 @@
       "Vendor gateways",
       "Phased channel migration"
     ],
-    "bullet": "Led a 25-person core redesign and phased migration that enabled 4× loan-volume growth, 30% lower operating costs, and faster product launches.",
+    "bullet": "Enabled 4x loan volume growth, reduced operating costs 30%, and halved product time-to-market by leading a 25-person team (Engineering, Accounting, BizDev, Ops) through a core-platform redesign and phased migration.",
     "skills": [
       "Build-versus-buy",
       "Technical product leadership",
@@ -197,7 +201,7 @@
       "Domestic wallet capabilities",
       "Recipient payout & reconciliation"
     ],
-    "bullet": "Launched cross-border remittance in six months by aligning a 20-person team and the domestic capabilities needed for international partners.",
+    "bullet": "Launched a cross-border remittance product in six months by leading a 20-person team across Engineering, Design, Compliance, Operations, and Marketing, opening a new revenue stream for ZaloPay in a $16B market.",
     "skills": [
       "Market entry",
       "Regulated execution",
@@ -234,7 +238,7 @@
       "Partner integration & certification",
       "Launch & operating feedback"
     ],
-    "bullet": "Led enterprise payment integrations with Google, ByteDance, Grab, and Lazada; the portfolio grew ride-hailing transactions 50% and payout volume 40%.",
+    "bullet": "Grew ride-hailing transactions 50%, payout volume 40%, and acquired 100K users by leading B2B product and API integrations with enterprise partners including Google, ByteDance, Grab, and Lazada.",
     "skills": [
       "B2B product discovery",
       "API product design",
@@ -271,7 +275,7 @@
       "Regulated partner integration",
       "Launch, revenue & phased expansion"
     ],
-    "bullet": "Launched stock trading as the first step in a broader investment proposition, contributing an estimated $100K in annual revenue.",
+    "bullet": "Drove an estimated $100K in annual revenue by analyzing market trends, competitor offerings, and customer behavior to prioritize a roadmap for digital investment products, leading partner integrations, delivery, and launch.",
     "skills": [
       "Product strategy",
       "Commercial judgment",
@@ -308,7 +312,7 @@
       "Embeddable mini-app",
       "Cake and partner distribution"
     ],
-    "bullet": "Launched an embeddable travel mini-app generating $45K in its first six months, with a foundation for independent releases and partner distribution.",
+    "bullet": "Unlocked $45K in new revenue in the first six months by launching an in-app travel feature built on a scalable, embeddable mini-app architecture, enabling independent releases and distribution across banks and partners.",
     "skills": [
       "New ventures",
       "Platform architecture",
@@ -338,14 +342,14 @@
     "context": "Fundiin’s rule-based screening was becoming harder to maintain, and Risk Operations still carried a substantial manual-review workload. The opportunity was to use combinations of transaction, merchant, device, behavioral, and customer signals more effectively. Overall accuracy would not be a sufficient launch criterion: rare fraud creates class imbalance, and false positives can reject good customers while missed fraud creates real losses.",
     "choice": "I brought Risk, Data Science, and Engineering together around the operating outcome and the economics of errors. We defined the model’s role, policy constraints, thresholds, and manual-review bands. With limited data-science capacity, we selected AutoML for the initial production iteration so the team could learn from the decision workflow without first building a custom training stack. The tradeoff was less transparency and control, making validation and oversight especially important.",
     "delivery": "I helped define the meaning and decision-time availability of business features; Data Science owned feature engineering and model training. I also challenged potential leakage from information that would not have been available when the original lending decision was made. We ran the model beside the existing process in shadow mode for roughly two to three months, inspected disagreements, and refined parameters before a staged rollout. Risk retained judgment on uncertain cases, while screening reduced the population requiring manual effort.",
-    "lesson": "The product is the complete decision system: model, policy rules, thresholds, exceptions, monitoring, and human accountability. My role was to connect those parts to a business outcome, not just introduce an algorithm.",
+    "lesson": "The product is the complete decision system: model, policy rules, thresholds, exceptions, monitoring, and human accountability. The resume’s 70% figure describes coverage of expert-identified rejection cases, not a claim of 70% model precision. Data Science owned model training; I connected evaluation and the operating workflow to the business outcome.",
     "flow": [
       "Define risk goals & error costs",
       "Evaluate in shadow mode",
       "Set thresholds & human review",
       "Stage deployment & monitor outcomes"
     ],
-    "bullet": "Partnered with Data Science to deploy ML risk screening that reduced manual-review workload 50% across a $2M monthly lending portfolio.",
+    "bullet": "Partnered with Data Science to deploy ML-based risk models, covering 70% of expert-identified rejection cases and reducing manual-review workload by 50% through automated screening across a $2M monthly portfolio.",
     "skills": [
       "ML product judgment",
       "Evaluation tradeoffs",
@@ -382,7 +386,7 @@
       "Test the cause, including reliability",
       "Experiment & measure conversion"
     ],
-    "bullet": "Improved payment conversion 20% through SQL/Python funnel analysis, 20+ customer interviews, and 10 A/B-tested experiments.",
+    "bullet": "Increased payment conversion by 20% by using SQL and Python to analyze user drop-off points, conducting 20+ customer interviews, and executing 10 A/B-tested funnel experiments.",
     "skills": [
       "Customer research",
       "Product analytics",

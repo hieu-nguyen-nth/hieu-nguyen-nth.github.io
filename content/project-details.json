@@ -193,7 +193,7 @@
   },
   "personal-recruiting-system": {
     "lede": "A personal recruiting workflow designed to preserve context: learn once, reuse evidence, and resume work without reconstructing it from scattered chats.",
-    "problem": "Job discovery, company research, relationship notes, and résumé preparation often become separate activities. Two roles at one company can lead to duplicate research; a new chat can lose the last decision; a polished draft can drift beyond the candidate’s actual experience. The product problem was continuity and evidence, not the absence of another application.",
+    "problem": "Job discovery, company research, relationship notes, and resume preparation often become separate activities. Two roles at one company can lead to duplicate research; a new chat can lose the last decision; a polished draft can drift beyond the candidate’s actual experience. The product problem was continuity and evidence, not the absence of another application.",
     "approach": "I designed a coordinator that routes work through reusable methods for evaluation, company research, networking, tailoring, and QA. Notion holds durable Jobs, Companies, People, and Events records. Candidate evidence stays in private source files. The public repository is a reference implementation with a fully fictional worked case, allowing readers to inspect the method without exposing personal recruiting records.",
     "flow_title": "One request, shared context, explicit handoffs",
     "flow_note": "The coordinator runs through an assistant. Methods are instructions, not a custom rules engine; connectors and shared records provide the operational tools and state.",
@@ -230,7 +230,7 @@
           "method"
         ],
         "Prepare supported changes",
-        "Map role requirements to original candidate stories; propose exact résumé edits with evidence.",
+        "Map role requirements to original candidate stories; propose exact resume edits with evidence.",
         "Tailoring method · private evidence"
       ],
       [
@@ -259,7 +259,7 @@
       ],
       [
         "Separate research from candidate evaluation",
-        "A company can be understood without a specific job or résumé. Role fit and application positioning are separate tasks, so the same business research remains useful across opportunities."
+        "A company can be understood without a specific job or resume. Role fit and application positioning are separate tasks, so the same business research remains useful across opportunities."
       ],
       [
         "Keep generation and review distinct",

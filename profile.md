@@ -38,7 +38,7 @@ A global perspective on AI-native products, business models, and scaling across 
 
 Bachelor, Marketing Management | June 2021
 
-Understanding how products find their market: customer insight, positioning, and monetization across physical, service, and digital businesses.
+A foundation in bringing products to market: customer insight, product design, pricing, monetization, quality management, distribution, promotion, and advertising across physical, service, and digital businesses.
 
 ## Independent projects
 
@@ -74,7 +74,7 @@ Status: Completed analysis subset. The dashboard and repository expose saved res
 
 A reusable workflow connecting discovery, company research, and evidence-backed preparation.
 
-Job discovery, company research, relationship notes, and résumé preparation often become separate activities. Two roles at one company can lead to duplicate research; a new chat can lose the last decision; a polished draft can drift beyond the candidate’s actual experience. The product problem was continuity and evidence, not the absence of another application.
+Job discovery, company research, relationship notes, and resume preparation often become separate activities. Two roles at one company can lead to duplicate research; a new chat can lose the last decision; a polished draft can drift beyond the candidate’s actual experience. The product problem was continuity and evidence, not the absence of another application.
 
 I designed a coordinator that routes work through reusable methods for evaluation, company research, networking, tailoring, and QA. Notion holds durable Jobs, Companies, People, and Events records. Candidate evidence stays in private source files. The public repository is a reference implementation with a fully fictional worked case, allowing readers to inspect the method without exposing personal recruiting records.
 
@@ -85,6 +85,22 @@ Status: Reference implementation. The public repository contains a fictional dem
 [Full case study](projects/personal-recruiting-system.html) · [Repository](https://github.com/hieu-nguyen-nth/personal-recruiting-system)
 
 ## Selected professional stories
+
+### Cake by VPBank — Advance AI-first banking and the product team’s operating model
+
+Challenge: Payment details often arrive in chat messages or images. Moving them into a banking app meant manually retyping account details and amounts.
+
+My contribution: I drove the text/image transfer experience that extracts payment information into a structured draft. The product keeps customer review and authorization as explicit steps; voice banking remained a separate roadmap and prototype track.
+
+Result: The production text/image transfer feature achieved approximately 80% correct prefilling. I enabled 10+ PMs to use AI-assisted prototyping and automation, reducing PM preparation effort by roughly 50%; prototypes that previously took hours could be prepared in about 30 minutes. Voice banking remained a research/prototype track.
+
+- Translated strategy into two roadmaps: Defined a customer-product track for transfer assistance and voice-banking exploration, alongside an internal track for prototypes, PRDs, tickets, and product coordination. Kept production capabilities distinct from research.
+- Started from an everyday behavior: Customers receive payment details in chats and screenshots. I framed the product around removing re-entry, rather than adding an open-ended banking chatbot.
+- Drew the AI boundary: Separated input interpretation and transaction drafting from banking validation and customer authorization. Voice banking stayed on a research/prototype track.
+- Made prototypes reviewable: Supplied flows, component rules, typography, and interaction logic to AI-assisted prototyping; brought working drafts to engineers for refinement.
+- Scaled the method across the team: Created PRD and ticket workflows using PM-supplied context, including Jira publishing through MCP. Trained 10+ PMs; prototypes that took hours could be prepared in roughly 30 minutes.
+
+[Full decision story](stories/cake-ai.html)
 
 ### Cake by VPBank — Launch stock trading within a broader investment strategy
 
@@ -101,36 +117,6 @@ Result: The investment launch contributed an estimated $100K in annual revenue. 
 
 [Full decision story](stories/cake-investment.html)
 
-### Cake by VPBank — Build a travel business on an embeddable mini-app platform
-
-Challenge: Separate partner SDKs fragmented the travel experience and left Cake dependent on provider interfaces, release cycles, and distribution economics.
-
-My contribution: I reframed the opportunity as a travel-commerce business with a shared customer journey. I led partner solution design, product requirements, architecture, and launch around a mini-app that could release independently and be embedded across distribution channels.
-
-Result: The in-app travel launch generated $45K in new revenue in its first six months. Its embeddable mini-app architecture enabled independent releases and distribution across banks and partners.
-
-- Challenged the SDK-host model: Separate supplier interfaces and release schedules limited control of the journey. I combined market opportunity, customer needs, performance, and partner issues into the business case.
-- Chose what Cake should own: Kept discovery, booking, payment, and the customer journey under Cake’s control, while integrating specialist inventory through backend adapters.
-- Designed for more than one host: Used an embeddable mini-app and common booking model so travel releases could move independently of the native banking app and support other distribution channels.
-- Kept the launch focused: Led partner solution design, wireframes, requirements, and readiness around a flights MVP. Sequenced additional services and post-booking capabilities later.
-
-[Full decision story](stories/cake-travel.html)
-
-### Cake by VPBank — From chat messages to a review-ready transfer
-
-Challenge: Payment details often arrive in chat messages or images. Moving them into a banking app meant manually retyping account details and amounts.
-
-My contribution: I drove the text/image transfer experience that extracts payment information into a structured draft. The product keeps customer review and authorization as explicit steps; voice banking remained a separate roadmap and prototype track.
-
-Result: The launched parsing experience correctly prefilled approximately 80% of inputs. I also trained 10+ PMs in AI-assisted prototyping and automation.
-
-- Started from an everyday behavior: Customers receive payment details in chats and screenshots. I framed the product around removing re-entry, rather than adding an open-ended banking chatbot.
-- Drew the AI boundary: Separated input interpretation and transaction drafting from banking validation and customer authorization. Voice banking stayed on a research/prototype track.
-- Made prototypes reviewable: Supplied flows, component rules, typography, and interaction logic to AI-assisted prototyping; brought working drafts to engineers for refinement.
-- Scaled the method across the team: Created PRD and ticket workflows using PM-supplied context, including Jira publishing through MCP. Trained 10+ PMs; prototypes that took hours could be prepared in roughly 30 minutes.
-
-[Full decision story](stories/cake-ai.html)
-
 ### Cake by VPBank — Give Risk a control plane, not an engineering queue
 
 Challenge: Policy changes depended on product and engineering releases, leaving Risk waiting days to respond to emerging patterns.
@@ -146,20 +132,20 @@ Result: Fraud controls could be deployed in about an hour instead of days, prote
 
 [Full decision story](stories/cake-risk.html)
 
-### Fundiin — Launch a new credit behavior through familiar QR payments
+### Cake by VPBank — Build a travel business on an embeddable mini-app platform
 
-Challenge: Merchant-by-merchant integrations limited where customers could use Fundiin credit. Everyday QR payments offered a broader way to reach them.
+Challenge: Separate partner SDKs fragmented the travel experience and left Cake dependent on provider interfaces, release cycles, and distribution economics.
 
-My contribution: I led discovery, the business case, roadmap, and launch of QR Pay-Later. We reused the existing lending core for the MVP to test demand before investing in a larger platform rebuild.
+My contribution: I reframed the opportunity as a travel-commerce business with a shared customer journey. I led partner solution design, product requirements, architecture, and launch around a mini-app that could release independently and be embedded across distribution channels.
 
-Result: The product attracted 20K users in its first month and reached 50% of company loan volume within eight months.
+Result: The in-app travel launch generated $45K in new revenue in its first six months. Its embeddable mini-app architecture enabled independent releases and distribution across banks and partners.
 
-- Identified the distribution constraint: Merchant-by-merchant installment acceptance limited everyday use. I combined QR payment behavior, competitor research, and customer discovery to test a broader credit interaction.
-- Tested the behavior before rebuilding: Chose an MVP on the existing lending core, accepting flexibility limits to learn whether customers would understand and use QR-based credit.
-- Connected experience and risk: Defined scanning, eligible offers, clear terms, and confirmation while working with leadership on risk appetite and launch decisions.
-- Gave junior colleagues real ownership: Coached research, the business case, product artifacts, and developer coordination while remaining accountable for direction and cross-functional delivery.
+- Challenged the SDK-host model: Separate supplier interfaces and release schedules limited control of the journey. I combined market opportunity, customer needs, performance, and partner issues into the business case.
+- Chose what Cake should own: Kept discovery, booking, payment, and the customer journey under Cake’s control, while integrating specialist inventory through backend adapters.
+- Designed for more than one host: Used an embeddable mini-app and common booking model so travel releases could move independently of the native banking app and support other distribution channels.
+- Kept the launch focused: Led partner solution design, wireframes, requirements, and readiness around a flights MVP. Sequenced additional services and post-booking capabilities later.
 
-[Full decision story](stories/fundiin-qr.html)
+[Full decision story](stories/cake-travel.html)
 
 ### Fundiin — Build a scalable multi-lender platform
 
@@ -175,6 +161,21 @@ Result: The launch expanded monthly funding capacity from $2M to $20M across thr
 - Protected delivery when knowledge was leaving: Mapped critical components threatened by engineering attrition and escalated a continuity plan to the CEO and CTO. Retained enough domain knowledge to finish delivery and transfer context.
 
 [Full decision story](stories/fundiin-lenders.html)
+
+### Fundiin — Launch a new credit behavior through familiar QR payments
+
+Challenge: Merchant-by-merchant integrations limited where customers could use Fundiin credit. Everyday QR payments offered a broader way to reach them.
+
+My contribution: I led discovery, the business case, roadmap, and launch of QR Pay-Later. We reused the existing lending core for the MVP to test demand before investing in a larger platform rebuild.
+
+Result: The product attracted 20K users in its first month and reached 50% of company loan volume within eight months.
+
+- Identified the distribution constraint: Merchant-by-merchant installment acceptance limited everyday use. I combined QR payment behavior, competitor research, and customer discovery to test a broader credit interaction.
+- Tested the behavior before rebuilding: Chose an MVP on the existing lending core, accepting flexibility limits to learn whether customers would understand and use QR-based credit.
+- Connected experience and risk: Defined scanning, eligible offers, clear terms, and confirmation while working with leadership on risk appetite and launch decisions.
+- Gave junior colleagues real ownership: Coached research, the business case, product artifacts, and developer coordination while remaining accountable for direction and cross-functional delivery.
+
+[Full decision story](stories/fundiin-qr.html)
 
 ### Fundiin — Redesign the core while the business keeps running
 
@@ -261,4 +262,4 @@ Street photography, Contemporary art, Indie music, Hiking
 - Github: https://github.com/hieu-nguyen-nth
 - Blog: https://substack.com/@hieutnguyen
 
-Professional background is based on the résumé supplied by Hieu Nguyen on November 1, 2026. Project descriptions are based on the linked repositories. This profile is an introduction, not a complete résumé.
+Professional background is based on the resume supplied by Hieu Nguyen on November 1, 2026. Project descriptions are based on the linked repositories. This profile is an introduction, not a complete resume.

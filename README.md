@@ -18,9 +18,9 @@ A static HTML/CSS/JavaScript site hosted with GitHub Pages from the root of the 
 
 Positioning: a product leader connecting AI products, platform architecture, and commercial decisions. The Venn represents AI products, platforms, and new ventures. It is a personal focus diagram, not a generic PM framework.
 
-Keep independent builds separate from employment. Background summaries should explain ownership and decisions rather than repeat résumé bullets; detailed stories remain opt-in. Education receives the same font hierarchy and reading size as experience. Use restrained weight, consistent type, compact but comfortable spacing, and borderless organization icons. Do not substitute oversized metrics or generic slogans for useful information. Desktop projects use three equal columns. Preserve accessibility, readable mobile type, and the Machine view.
+Keep independent builds separate from employment. Background summaries should explain ownership and decisions rather than repeat resume bullets; detailed stories remain opt-in. Education receives the same font hierarchy and reading size as experience. Use restrained weight, consistent type, compact but comfortable spacing, and borderless organization icons. Do not substitute oversized metrics or generic slogans for useful information. Desktop projects use three equal columns. Preserve accessibility, readable mobile type, and the Machine view.
 
-Facts come from the résumé supplied November 1, 2026, career-story materials, and linked repositories. Update HTML, JSON, and Markdown together. Do not invent a portrait, résumé download, or email address. 
+Facts come from the resume supplied November 1, 2026, career-story materials, and linked repositories. Update HTML, JSON, and Markdown together. Do not invent a portrait, resume download, or email address.
 
 ## Detail-page content and build
 
@@ -36,4 +36,4 @@ Edit the source files, run `python3 scripts/build-detail-pages.py`, review local
 
 ## Interactive career stories
 
-`resume/index.html` pairs eleven career bullets with a desktop story reader; smaller screens use inline native disclosures. The same stories remain accessible as standalone pages. Homepage company entries summarize outcomes and offer a concise What I did expansion. `content/story-details.json` stores the specific actions and strengths; `scripts/build-story-experience.py` is called by the detail-page builder. Keep narrative claims grounded in the master story bank, with estimates and role boundaries intact.
+`resume/index.html` pairs eleven career bullets with a desktop story reader; smaller screens use inline native disclosures. The same stories remain accessible as standalone pages. Homepage company entries align in a shared work grid with selected achievements and one work-story expansion each; education sits in a unified band below. `content/story-details.json` stores the specific actions and strengths; `scripts/build-story-experience.py` is called by the detail-page builder. Keep narrative claims grounded in the master story bank, with estimates and role boundaries intact.
